@@ -31,7 +31,6 @@ class Model {
         let person = persons[indexPath.row]
         
         persons.remove(at: indexPath.row)
-        
         Firebase<Person>.delete(item: person) { success in
             guard success else { return }
             DispatchQueue.main.async {
@@ -42,7 +41,6 @@ class Model {
         func updatePerson(at indexPath: IndexPath, completion: @escaping () -> Void) {
             let person = persons[indexPath.row]
             persons.append(person)
-            
             Firebase<Person>.save(item: person) { success in
                 guard success else { return }
                 DispatchQueue.main.async {

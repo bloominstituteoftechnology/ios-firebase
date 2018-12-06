@@ -44,7 +44,7 @@ class Model {
             persons.append(person)
             
             Firebase<Person>.save(item: person) { success in
-                guard let success else { return }
+                guard success else { return }
                 DispatchQueue.main.async {
                     completion()
                 }

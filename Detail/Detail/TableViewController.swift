@@ -33,7 +33,7 @@ class TableViewController: UITableViewController, ModelUpdateClient {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: PersonCell.reuseIdentifier, for: indexPath) as? PersonCell
             else { fatalError("Unable to dequeue person cell") }
         
-        let person = Model.shared.person(forIndex: indexPath.row)
+        let person = Model.shared.person(at: indexPath)
         cell.nameLabel.text = person.name
         cell.cohortLabel.text = person.cohort
         return cell
@@ -59,6 +59,6 @@ class TableViewController: UITableViewController, ModelUpdateClient {
         guard let destination = segue.destination as? DetailViewController
             else { return }
         
-        destination.person = Model.shared.person(forIndex: indexPath.row)
+        destination.person = Model.shared.person(at: indexPath)
     }
 }

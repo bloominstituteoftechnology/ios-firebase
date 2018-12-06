@@ -11,7 +11,9 @@ class EntryCell: UITableViewCell {
         guard let name = nameField.text, !name.isEmpty else { return }
         let cohort = cohortField.text ?? ""
         let person = Person(name: name, cohort: cohort)
-        Model.shared.add(person: person)
+        Model.shared.add(person: person) {
+            return
+        }
         nameField.text = nil
         cohortField.text = nil
     }

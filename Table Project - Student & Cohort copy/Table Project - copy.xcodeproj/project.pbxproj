@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		841F119321B9CED7002BFD09 /* FirebaseItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841F119221B9CED6002BFD09 /* FirebaseItem.swift */; };
+		841F119521B9CF9D002BFD09 /* Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841F119421B9CF9D002BFD09 /* Firebase.swift */; };
 		8464AC7821ADBB8500E85E34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8464AC7721ADBB8500E85E34 /* AppDelegate.swift */; };
 		8464AC7D21ADBB8500E85E34 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8464AC7B21ADBB8500E85E34 /* Main.storyboard */; };
 		8464AC7F21ADBB8700E85E34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8464AC7E21ADBB8700E85E34 /* Assets.xcassets */; };
@@ -20,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		841F119221B9CED6002BFD09 /* FirebaseItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseItem.swift; sourceTree = "<group>"; };
+		841F119421B9CF9D002BFD09 /* Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Firebase.swift; sourceTree = "<group>"; };
 		8464AC7421ADBB8500E85E34 /* Table Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Table Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8464AC7721ADBB8500E85E34 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8464AC7C21ADBB8500E85E34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -66,10 +70,12 @@
 			children = (
 				8464AC7721ADBB8500E85E34 /* AppDelegate.swift */,
 				8464AC7B21ADBB8500E85E34 /* Main.storyboard */,
-				8464AC9121ADC26200E85E34 /* Model.swift */,
+				841F119221B9CED6002BFD09 /* FirebaseItem.swift */,
+				841F119421B9CF9D002BFD09 /* Firebase.swift */,
 				8464AC9321ADC27300E85E34 /* Person.swift */,
 				8464AC8B21ADC1D800E85E34 /* PersonCell.swift */,
 				8464AC8921ADC1BC00E85E34 /* AddPersonCell.swift */,
+				8464AC9121ADC26200E85E34 /* Model.swift */,
 				8464AC8D21ADC20E00E85E34 /* DetailViewController.swift */,
 				8464AC8F21ADC23300E85E34 /* PersonTableViewController.swift */,
 				8464AC7E21ADBB8700E85E34 /* Assets.xcassets */,
@@ -114,7 +120,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 8464AC6F21ADBB8500E85E34 /* Build configuration list for PBXProject "Table Project" */;
+			buildConfigurationList = 8464AC6F21ADBB8500E85E34 /* Build configuration list for PBXProject "Table Project - copy" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -155,6 +161,8 @@
 				8464AC8A21ADC1BC00E85E34 /* AddPersonCell.swift in Sources */,
 				8464AC9221ADC26200E85E34 /* Model.swift in Sources */,
 				8464AC9421ADC27300E85E34 /* Person.swift in Sources */,
+				841F119321B9CED7002BFD09 /* FirebaseItem.swift in Sources */,
+				841F119521B9CF9D002BFD09 /* Firebase.swift in Sources */,
 				8464AC7821ADBB8500E85E34 /* AppDelegate.swift in Sources */,
 				8464AC8E21ADC20E00E85E34 /* DetailViewController.swift in Sources */,
 			);
@@ -335,7 +343,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8464AC6F21ADBB8500E85E34 /* Build configuration list for PBXProject "Table Project" */ = {
+		8464AC6F21ADBB8500E85E34 /* Build configuration list for PBXProject "Table Project - copy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8464AC8421ADBB8700E85E34 /* Debug */,

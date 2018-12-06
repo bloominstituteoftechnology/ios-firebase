@@ -15,8 +15,34 @@ class Model {
         return persons[index]
     }
     
-    func add(person: Person) {
+    func add(person: Person, completion: @escaping () -> Void) {
         persons.append(person)
-        delegate?.modelDidUpdate()
+
+        Firebase<Person>.save(item: person) { success in
+            guard success else { return }
+            DispatchQueue.main.async { completion() }
+        }
+    }
+    func deletePerson(at indexPath: IndexPath, completion: @escaping () -> Void) {
+        let person = persons[indexPath.row]
+        //in local model
+        persons.remove(at: indexPath.row)
+        
+        //in firebase
+        Firebase<Person>.delete(item: person) { success in
+            guard success else { return }
+            DispatchQueue.main.async { completion() }
+        }
+    }
+    
+    func updatePerson(at indexPath: IndexPath, completion: @escaping () -> Void) {
+        //in local model
+        let person = persons[indexPath.row]
+
+        //in firebase
+        Firebase<Person>.save(item: person) { success in
+            guard success else { return }
+            DispatchQueue.main.async { completion() }
+        }
     }
 }

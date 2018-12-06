@@ -42,6 +42,10 @@ class TableViewController: UITableViewController, ModelUpdateClient {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         tableView.reloadData()
+        
+        Firebase<Person>.fetchRecords { persons in
+            
+        }
     }
     
     override func viewDidLoad() {

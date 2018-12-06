@@ -45,7 +45,12 @@ class TableViewController: UITableViewController, ModelUpdateClient {
     }
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         
-        // need to add delete func
+        guard editingStyle == .delete else { return }
+        
+        
+        Model.shared.deletePerson(at: indexPath) {
+            self.tableView.reloadData()
+        }
        
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

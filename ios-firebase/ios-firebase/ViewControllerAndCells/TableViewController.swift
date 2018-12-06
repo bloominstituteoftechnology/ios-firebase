@@ -62,6 +62,17 @@ class TableViewController: UITableViewController, ModelUpdateClient {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        
+        guard editingStyle == .delete else { return }
+        
+        // FIXME: Delete an item, update Firebase, update model, and reload data
+        Model.shared.deletePerson(at: indexPath) {
+            self.tableView.reloadData()
+        }
+
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         Model.shared.delegate = self

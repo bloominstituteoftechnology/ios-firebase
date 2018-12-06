@@ -5,4 +5,5 @@ class Student: Codable, FirebaseItem {
     let cohort: String
     var uuid = UUID().uuidString
     var recordIdentifier = ""
+    
 }

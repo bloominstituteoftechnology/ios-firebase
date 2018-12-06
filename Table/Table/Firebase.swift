@@ -1,30 +1,16 @@
 import Foundation
 
-/*
- READ   <- start the application
- 
- POST   <- create, creating a new record, Firebase will return a new record identifier
- PUT    <- update a specific record
- DELETE <- delete a specific record
- */
-
-//Item will refer to a type
 class Firebase<Item: Codable & FirebaseItem> {
     static var baseURL: URL!  { return URL(string: "https://cohort-2582d.firebaseio.com/") }
     
-    //REST methods...put, post, get, delete....passing one of these as a string.
+    
     static func requestURL(_ method: String, for recordIdentifier: String = "unknownid") -> URL {
         switch method {
         case "POST":
             // You post to the main DB. It will return a new record identifier
             return baseURL.appendingPathExtension("json")
         case "DELETE", "PUT", "GET":
-            // These all work on individual records, and you need to use the
-            // record identifier in your URL with one exception, which is when
-            // all the records at once, in which case, you do not need the record
-            // identifier.
-            //
-            // will return https://first-79c73.firebaseio.com/*recordId*.json
+           
             return baseURL
                 .appendingPathComponent(recordIdentifier)
                 .appendingPathExtension("json")
@@ -33,19 +19,17 @@ class Firebase<Item: Codable & FirebaseItem> {
         }
     }
     
-    // Handle a single request: meant for DELETE, PUT, POST.
-    // If you were doing a GET, you'd want to pass back a record and not a success token
     static func processRequest(
-        method: String, //GET PUT, POST or DELETE
-        for item: Item, // conforms to codable and FirebaseItem (we have a record id field
+        method: String,
+        for item: Item,
         with completion: @escaping (_ success: Bool) -> Void = { _ in }
         ) {
         
-        // Fetch appropriate request URL customized to method
+       
         var request = URLRequest(url: requestURL(method, for: item.recordIdentifier))
         request.httpMethod = method
         
-        // Encode this record
+       
         do {
             request.httpBody = try JSONEncoder().encode(item)
         } catch {

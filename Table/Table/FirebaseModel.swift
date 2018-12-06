@@ -12,7 +12,7 @@ class Model {
         return students.count
     }
     
-    func device(at indexPath: IndexPath) -> Device {
+    func student(at indexPath: IndexPath) -> Student {
         return students[indexPath.row]
     }
     
@@ -20,14 +20,13 @@ class Model {
     
     
     
-    func addNewDevice(completion: @escaping () -> Void) {
-        let student = Student.
-        
-        //append it to our devices array, updating our local model <--- locally
-        devices.append(device)
+    func addNewStudent(student: Student, completion: @escaping () -> Void) {
+       let student = student
+        //append it to our students array, updating our local model <--- locally
+        students.append(student)
         
         // save it by pushing it to Firebase <-- remotely
-        Firebase<Device>.save(item: device) { success in
+        Firebase<Student>.save(item: student) { success in
             guard success else { return }
             DispatchQueue.main.async { completion() }
         }
@@ -35,13 +34,13 @@ class Model {
     
     
     
-    func deleteDevice(at indexPath: IndexPath, completion: @escaping () -> Void) {
-        let device = devices[indexPath.row]
+    func deleteStudent(at indexPath: IndexPath, completion: @escaping () -> Void) {
+        let student = students[indexPath.row]
         //delete locally
-        devices.remove(at: indexPath.row)
+        students.remove(at: indexPath.row)
         
         //delete remotely
-        Firebase<Device>.delete(item: device) { success in
+        Firebase<Student>.delete(item: student) { success in
             guard success else { return }
             DispatchQueue.main.async { completion() }
         }
@@ -49,14 +48,14 @@ class Model {
     
     
     
-    func updateDevice(at indexPath: IndexPath, completion: @escaping () -> Void) {
-        let device = devices[indexPath.row]
+    func updateStudent(at indexPath: IndexPath, completion: @escaping () -> Void) {
+        let student = students[indexPath.row]
         
         // locally
-        device.uuid = UUID().uuidString
+        student.uuid = UUID().uuidString
         
         //remotely
-        Firebase<Device>.save(item: device) { success in
+        Firebase<Student>.save(item: student) { success in
             guard success else { return }
             DispatchQueue.main.async { completion() }
         }

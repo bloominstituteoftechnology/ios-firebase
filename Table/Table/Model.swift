@@ -1,6 +1,6 @@
 import Foundation
 
-class Model {
+class ssModel {
     // MARK: Singleton
     static let shared = Model()
     private init() {}

@@ -2,7 +2,30 @@ import UIKit
 
 class TableViewController: UITableViewController, ModelUpdateClient {
     
-    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationItem.rightBarButtonItem?.isEnabled = false
+        let activity = UIActivityIndicatorView()
+        activity.style = .gray
+        activity.startAnimating()
+        navigationItem.titleView = activity
+        
+        // Fetch records from Firebase and then reload the table view
+        // Note: this may be significantly delayed.
+        Firebase<Person>.fetchRecords { persons in
+            if let persons = persons {
+                Model.shared.setPersons(persons: persons)
+                
+                // Comment this out to show what it looks like while waiting
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                    self.navigationItem.rightBarButtonItem?.isEnabled = true
+                    self.navigationItem.titleView = nil
+                    self.title = "Person List"
+                }
+            }
+        }
+    }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 2
@@ -26,8 +49,10 @@ class TableViewController: UITableViewController, ModelUpdateClient {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: EntryCell.reuseIdentifier, for: indexPath) as? EntryCell
                 else { fatalError("Unable to dequeue entry cell") }
             
-            cell.nameField.text = "" // Coder paranoia
-            cell.cohortField.text = ""
+            let person = Model.shared.person(forIndex: indexPath.row)
+            
+            cell.nameField.text = person.name
+            cell.cohortField.text = person.cohort
             
             return cell
         }
@@ -40,11 +65,6 @@ class TableViewController: UITableViewController, ModelUpdateClient {
         cell.nameLabel.text = person.name
         cell.cohortLabel.text = person.cohort
         return cell
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        tableView.reloadData()
     }
     
     override func viewDidLoad() {

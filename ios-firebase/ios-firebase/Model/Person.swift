@@ -6,7 +6,8 @@ class Person: Codable, FirebaseItem {
     var cohort: String
     var recordIdentifier: String = ""
     
-    init(name: String, cohort: String) {
+    init(name: String, cohort: String?) {
+        let cohort = cohort ?? ""
         (self.name, self.cohort) = (name, cohort)
     }
 }

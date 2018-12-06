@@ -15,7 +15,13 @@ class Model {
         return persons[index]
     }
     
+    func setPersons(persons: [Person]) {
+        Model.shared.persons = persons
+    }
+    
     // MARK: Core Database Management Methods
+    
+    
     
     // TODO: remove this when addNewPerson is complete and working
     func add(person: Person) {

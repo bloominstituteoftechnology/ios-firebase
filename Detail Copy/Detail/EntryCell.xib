@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="212" id="B1E-df-MsY" customClass="EntryCell" customModule="Detail" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="374" height="128"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="B1E-df-MsY" id="v8p-9u-qIK">
+                <rect key="frame" x="0.0" y="0.0" width="374" height="127.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="MfI-71-sdm">
+                        <rect key="frame" x="24" y="19" width="326" height="90"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="lastBaseline" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="2b5-iY-Nxt">
+                                <rect key="frame" x="0.0" y="0.0" width="326" height="24"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pID-SS-HJH">
+                                        <rect key="frame" x="0.0" y="3.5" width="58" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fTM-eE-VC1">
+                                        <rect key="frame" x="66" y="0.0" width="260" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="lastBaseline" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Han-aq-b7n">
+                                <rect key="frame" x="0.0" y="31.5" width="326" height="24"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cohort:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Xx-D6-6uk">
+                                        <rect key="frame" x="0.0" y="3.5" width="58" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Cohort" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9By-PR-9uj">
+                                        <rect key="frame" x="66" y="0.0" width="260" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <viewLayoutGuide key="safeArea" id="PiP-d1-TVB"/>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c7m-RO-NfC">
+                                <rect key="frame" x="0.0" y="60" width="326" height="30"/>
+                                <state key="normal" title="Add"/>
+                                <connections>
+                                    <action selector="add:" destination="B1E-df-MsY" eventType="touchUpInside" id="ZeD-3g-6LS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="1Xx-D6-6uk" firstAttribute="width" secondItem="pID-SS-HJH" secondAttribute="width" id="V1s-Bq-lh9"/>
+                        </constraints>
+                    </stackView>
+                </subviews>
+                <color key="backgroundColor" red="0.9490865786668613" green="0.9490865786668613" blue="0.9490865786668613" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstItem="MfI-71-sdm" firstAttribute="top" secondItem="v8p-9u-qIK" secondAttribute="topMargin" constant="8" id="2nz-hR-tHZ"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="MfI-71-sdm" secondAttribute="trailing" constant="8" id="7hK-DA-ofZ"/>
+                    <constraint firstItem="MfI-71-sdm" firstAttribute="leading" secondItem="v8p-9u-qIK" secondAttribute="leadingMargin" constant="8" id="Cu5-vd-QQg"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="MfI-71-sdm" secondAttribute="bottom" constant="8" id="LbT-f1-wi1"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="cohortField" destination="9By-PR-9uj" id="ons-E5-hmz"/>
+                <outlet property="nameField" destination="fTM-eE-VC1" id="HS3-zj-AMa"/>
+            </connections>
+            <point key="canvasLocation" x="272" y="-191.6041979010495"/>
+        </tableViewCell>
+    </objects>
+</document>

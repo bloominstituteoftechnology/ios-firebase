@@ -17,6 +17,8 @@ class DetailViewController: UIViewController {
     @IBAction func save(_ sender: Any) {
         guard let person = person else { return }
         guard let name = nameField.text, !name.isEmpty else { return }
+        Model.shared.
+        
         person.name = name
         person.cohort = cohortField.text ?? ""
         navigationController?.popViewController(animated: true)

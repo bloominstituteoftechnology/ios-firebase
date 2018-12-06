@@ -29,7 +29,7 @@ class Model {
         delegate?.modelDidUpdate()
     }
     
-    func addNewDevice(person: Person, completion: @escaping () -> Void) {
+    func addNewPerson(person: Person, completion: @escaping () -> Void) {
         
         let person = person
         

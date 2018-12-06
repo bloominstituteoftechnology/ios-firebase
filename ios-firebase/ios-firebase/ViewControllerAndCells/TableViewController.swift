@@ -43,16 +43,11 @@ class TableViewController: UITableViewController, ModelUpdateClient {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.section == 0 {
+        if indexPath.section != 1 {
             // handle the single entry cell
             // return it
             guard let cell = tableView.dequeueReusableCell(withIdentifier: EntryCell.reuseIdentifier, for: indexPath) as? EntryCell
                 else { fatalError("Unable to dequeue entry cell") }
-            
-            let person = Model.shared.person(forIndex: indexPath.row)
-            
-            cell.nameField.text = person.name
-            cell.cohortField.text = person.cohort
             
             return cell
         }
@@ -61,9 +56,9 @@ class TableViewController: UITableViewController, ModelUpdateClient {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: PersonCell.reuseIdentifier, for: indexPath) as? PersonCell
             else { fatalError("Unable to dequeue person cell") }
         
-        let person = Model.shared.person(forIndex: indexPath.row)
-        cell.nameLabel.text = person.name
-        cell.cohortLabel.text = person.cohort
+            let person = Model.shared.person(forIndex: indexPath.row)
+            cell.nameLabel.text = person.name
+            cell.cohortLabel.text = person.cohort
         return cell
     }
     

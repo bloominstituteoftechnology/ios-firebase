@@ -22,13 +22,6 @@ class Model {
     // MARK: Core Database Management Methods
     
     
-    
-    // TODO: remove this when addNewPerson is complete and working
-    func add(person: Person) {
-        persons.append(person)
-        delegate?.modelDidUpdate()
-    }
-    
     func addNewPerson(person: Person, completion: @escaping () -> Void) {
         
         // append it to our devices array, updating our local model <-- local
@@ -39,7 +32,7 @@ class Model {
             guard success else {return}
             DispatchQueue.main.async { completion()}
         }
-        
+        delegate?.modelDidUpdate()
     }
     
     func deletePerson(at indexPath: IndexPath, completion: @escaping () -> Void) {
@@ -54,7 +47,7 @@ class Model {
             guard success else {return}
             DispatchQueue.main.async { completion()}
         }
-        
+        delegate?.modelDidUpdate()
     }
     
     
@@ -69,6 +62,5 @@ class Model {
             guard success else {return}
             DispatchQueue.main.async { completion()}
         }
-        
     }
 }

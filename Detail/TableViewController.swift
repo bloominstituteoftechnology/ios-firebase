@@ -43,7 +43,11 @@ class TableViewController: UITableViewController, ModelUpdateClient {
         }
         
     }
-    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        
+        // need to add delete func
+       
+    }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
             // handle the single entry cell
@@ -51,10 +55,10 @@ class TableViewController: UITableViewController, ModelUpdateClient {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: EntryCell.reuseIdentifier, for: indexPath) as? EntryCell
                 else { fatalError("Unable to dequeue entry cell") }
             
-            let person = Model.shared.person(forIndex: indexPath.row)
+//            let person = Model.shared.person(forIndex: indexPath.row)
             
-            cell.nameField.text = person.name
-            cell.cohortField.text = person.cohort
+            cell.nameField.text = ""
+            cell.cohortField.text = ""
             
             return cell
         }

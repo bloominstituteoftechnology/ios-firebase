@@ -31,8 +31,6 @@ class Model {
     
     func addNewPerson(person: Person, completion: @escaping () -> Void) {
         
-        let person = person
-        
         // append it to our devices array, updating our local model <-- local
         persons.append(person)
         
@@ -60,9 +58,8 @@ class Model {
     }
     
     
-    func updatePerson(at indexPath: IndexPath, completion: @escaping () -> Void) {
+    func updatePerson(for person: Person, completion: @escaping () -> Void) {
         //
-        let person = persons[indexPath.row]
         
         // TODO: do we need this?
         //device.uuid = UUID().uuidString

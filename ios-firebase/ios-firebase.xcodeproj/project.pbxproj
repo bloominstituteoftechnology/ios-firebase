@@ -8,20 +8,40 @@
 
 /* Begin PBXBuildFile section */
 		D13D357B21B9C57800E46F00 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13D357A21B9C57800E46F00 /* AppDelegate.swift */; };
-		D13D357D21B9C57800E46F00 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13D357C21B9C57800E46F00 /* ViewController.swift */; };
-		D13D358021B9C57800E46F00 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D13D357E21B9C57800E46F00 /* Main.storyboard */; };
 		D13D358221B9C57900E46F00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D13D358121B9C57900E46F00 /* Assets.xcassets */; };
-		D13D358521B9C57900E46F00 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D13D358321B9C57900E46F00 /* LaunchScreen.storyboard */; };
+		D13D358F21B9C66100E46F00 /* Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13D358E21B9C66100E46F00 /* Firebase.swift */; };
+		D13D359121B9C66E00E46F00 /* FirebaseItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13D359021B9C66E00E46F00 /* FirebaseItem.swift */; };
+		D13D359721B9C6EE00E46F00 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D13D359621B9C6EE00E46F00 /* Main.storyboard */; };
+		D13D359B21B9C6F900E46F00 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D13D359821B9C6F900E46F00 /* LaunchScreen.storyboard */; };
+		D13D359C21B9C6F900E46F00 /* PersonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D13D359921B9C6F900E46F00 /* PersonCell.xib */; };
+		D13D359D21B9C6F900E46F00 /* EntryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D13D359A21B9C6F900E46F00 /* EntryCell.xib */; };
+		D13D35A121B9C70400E46F00 /* ModelUpdateClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13D359E21B9C70400E46F00 /* ModelUpdateClient.swift */; };
+		D13D35A221B9C70400E46F00 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13D359F21B9C70400E46F00 /* Model.swift */; };
+		D13D35A321B9C70400E46F00 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13D35A021B9C70400E46F00 /* Person.swift */; };
+		D13D35A821B9C71900E46F00 /* PersonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13D35A421B9C71900E46F00 /* PersonCell.swift */; };
+		D13D35A921B9C71900E46F00 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13D35A521B9C71900E46F00 /* DetailViewController.swift */; };
+		D13D35AA21B9C71900E46F00 /* EntryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13D35A621B9C71900E46F00 /* EntryCell.swift */; };
+		D13D35AB21B9C71900E46F00 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13D35A721B9C71900E46F00 /* TableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D13D357721B9C57800E46F00 /* ios-firebase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-firebase.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D13D357A21B9C57800E46F00 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D13D357C21B9C57800E46F00 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D13D357F21B9C57800E46F00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D13D358121B9C57900E46F00 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		D13D358421B9C57900E46F00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D13D358621B9C57900E46F00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D13D358E21B9C66100E46F00 /* Firebase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Firebase.swift; sourceTree = "<group>"; };
+		D13D359021B9C66E00E46F00 /* FirebaseItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseItem.swift; sourceTree = "<group>"; };
+		D13D359621B9C6EE00E46F00 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		D13D359821B9C6F900E46F00 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D13D359921B9C6F900E46F00 /* PersonCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PersonCell.xib; sourceTree = "<group>"; };
+		D13D359A21B9C6F900E46F00 /* EntryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EntryCell.xib; sourceTree = "<group>"; };
+		D13D359E21B9C70400E46F00 /* ModelUpdateClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelUpdateClient.swift; sourceTree = "<group>"; };
+		D13D359F21B9C70400E46F00 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		D13D35A021B9C70400E46F00 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		D13D35A421B9C71900E46F00 /* PersonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonCell.swift; sourceTree = "<group>"; };
+		D13D35A521B9C71900E46F00 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		D13D35A621B9C71900E46F00 /* EntryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryCell.swift; sourceTree = "<group>"; };
+		D13D35A721B9C71900E46F00 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,13 +75,55 @@
 			isa = PBXGroup;
 			children = (
 				D13D357A21B9C57800E46F00 /* AppDelegate.swift */,
-				D13D357C21B9C57800E46F00 /* ViewController.swift */,
-				D13D357E21B9C57800E46F00 /* Main.storyboard */,
+				D13D359521B9C6B400E46F00 /* Networking */,
+				D13D359421B9C6AC00E46F00 /* Resources */,
+				D13D359321B9C69E00E46F00 /* ViewControllerAndCells */,
+				D13D359221B9C69300E46F00 /* Model */,
 				D13D358121B9C57900E46F00 /* Assets.xcassets */,
-				D13D358321B9C57900E46F00 /* LaunchScreen.storyboard */,
 				D13D358621B9C57900E46F00 /* Info.plist */,
 			);
 			path = "ios-firebase";
+			sourceTree = "<group>";
+		};
+		D13D359221B9C69300E46F00 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D13D359F21B9C70400E46F00 /* Model.swift */,
+				D13D359E21B9C70400E46F00 /* ModelUpdateClient.swift */,
+				D13D35A021B9C70400E46F00 /* Person.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D13D359321B9C69E00E46F00 /* ViewControllerAndCells */ = {
+			isa = PBXGroup;
+			children = (
+				D13D35A521B9C71900E46F00 /* DetailViewController.swift */,
+				D13D35A621B9C71900E46F00 /* EntryCell.swift */,
+				D13D35A421B9C71900E46F00 /* PersonCell.swift */,
+				D13D35A721B9C71900E46F00 /* TableViewController.swift */,
+			);
+			path = ViewControllerAndCells;
+			sourceTree = "<group>";
+		};
+		D13D359421B9C6AC00E46F00 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D13D359621B9C6EE00E46F00 /* Main.storyboard */,
+				D13D359A21B9C6F900E46F00 /* EntryCell.xib */,
+				D13D359821B9C6F900E46F00 /* LaunchScreen.storyboard */,
+				D13D359921B9C6F900E46F00 /* PersonCell.xib */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D13D359521B9C6B400E46F00 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				D13D358E21B9C66100E46F00 /* Firebase.swift */,
+				D13D359021B9C66E00E46F00 /* FirebaseItem.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,9 +184,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D13D358521B9C57900E46F00 /* LaunchScreen.storyboard in Resources */,
+				D13D359B21B9C6F900E46F00 /* LaunchScreen.storyboard in Resources */,
 				D13D358221B9C57900E46F00 /* Assets.xcassets in Resources */,
-				D13D358021B9C57800E46F00 /* Main.storyboard in Resources */,
+				D13D359D21B9C6F900E46F00 /* EntryCell.xib in Resources */,
+				D13D359C21B9C6F900E46F00 /* PersonCell.xib in Resources */,
+				D13D359721B9C6EE00E46F00 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,31 +199,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D13D357D21B9C57800E46F00 /* ViewController.swift in Sources */,
+				D13D358F21B9C66100E46F00 /* Firebase.swift in Sources */,
+				D13D35A121B9C70400E46F00 /* ModelUpdateClient.swift in Sources */,
+				D13D359121B9C66E00E46F00 /* FirebaseItem.swift in Sources */,
+				D13D35AB21B9C71900E46F00 /* TableViewController.swift in Sources */,
+				D13D35A221B9C70400E46F00 /* Model.swift in Sources */,
+				D13D35AA21B9C71900E46F00 /* EntryCell.swift in Sources */,
+				D13D35A321B9C70400E46F00 /* Person.swift in Sources */,
 				D13D357B21B9C57800E46F00 /* AppDelegate.swift in Sources */,
+				D13D35A821B9C71900E46F00 /* PersonCell.swift in Sources */,
+				D13D35A921B9C71900E46F00 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		D13D357E21B9C57800E46F00 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D13D357F21B9C57800E46F00 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		D13D358321B9C57900E46F00 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D13D358421B9C57900E46F00 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		D13D358721B9C57900E46F00 /* Debug */ = {

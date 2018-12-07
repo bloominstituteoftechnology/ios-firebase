@@ -41,7 +41,17 @@ class TableViewController: UITableViewController, ModelUpdateClient {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        tableView.reloadData()
+        Firebase<Person>.fetchRecords { persons in
+            if let persons = persons {
+                Model.shared.persons = persons
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                    self.navigationItem.rightBarButtonItem?.isEnabled = true
+                    self.navigationItem.titleView = nil
+                    self.title = "Devices"
+                }
+            }
+        }
     }
     
     override func viewDidLoad() {

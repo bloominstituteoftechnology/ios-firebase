@@ -5,7 +5,7 @@ class Model {
     private init() {}
     var delegate: ModelUpdateClient?
     
-    private var persons: [Person] = []
+     var persons: [Person] = []
     
     func count() -> Int {
         return persons.count
@@ -38,8 +38,7 @@ class Model {
             }
         }
      }
-        func updatePerson(at indexPath: IndexPath, completion: @escaping () -> Void) {
-            let person = persons[indexPath.row]
+        func updatePerson(person: Person, completion: @escaping () -> Void) {
             persons.append(person)
             Firebase<Person>.save(item: person) { success in
                 guard success else { return }

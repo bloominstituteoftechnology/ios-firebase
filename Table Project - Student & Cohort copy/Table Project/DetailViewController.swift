@@ -25,6 +25,12 @@ class DetailViewController: UIViewController {
         person.name = name
         person.cohort = cohortField.text ?? "" // nil coalescing, if the result is nil, give it a fallback value (an empty string)
         
+        // Remote:
+        Model.shared.updatePerson(person: person) {
+            return
+        }
+        
+        
         // Leave
         navigationController?.popViewController(animated: true) // Optional/Conditional Chaining: if there is a value in the navigation controller, perform what comes after the question mark. otherwise don't do anything.
        

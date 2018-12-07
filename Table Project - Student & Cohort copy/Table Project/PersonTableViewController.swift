@@ -3,10 +3,33 @@ import UIKit
 // 
 class PersonTableViewController: UITableViewController {
     
+    
+    // reload when we return from the detail view (ensure that the table view reloads whenever we return from the detail view controller)
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        
+        // Fetch records from Firebase and reload the table view
+        Firebase<Person>.fetchRecords { people in
+            if let people = people {
+                Model.shared.people = people
+                
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                    
+                }
+            }
+        }
+        
+
+    }
+    
+    // Number of sections
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 2
     }
     
+    // Number of rows
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // switch statement
         switch section {
@@ -19,6 +42,7 @@ class PersonTableViewController: UITableViewController {
         }
     }
     
+    // Cell contents
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
             // get a cell
@@ -40,6 +64,17 @@ class PersonTableViewController: UITableViewController {
         return cell
     }
     
+    // Delete a person, update Firebase, update model, and reload data
+    override func tableView(_ tableViewPassedToUs: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        
+        guard editingStyle == .delete else { return }
+        
+        Model.shared.removePerson(at: indexPath) {
+            self.tableView.reloadData()
+        }
+    }
+    
+    // Add a new person, store it at Firebase, update model, and reload data
     @IBAction func add() {
         // how many addPersonCells will we have at one time? Always guaranteed that there will be one. So we can grab that single add person cell and cast it to the right type
         guard let cell = tableView.cellForRow(at: IndexPath(row: 0, section: 0)) as? AddPersonCell
@@ -60,17 +95,13 @@ class PersonTableViewController: UITableViewController {
         cell.cohortField.text = ""
         
         // add to the model
-        Model.shared.add(person: person)
-        // update our table view
-        tableView.reloadData()
+        Model.shared.addNewPerson(person: person) {
+            self.tableView.reloadData()
+        }
         
     }
     
-    // reload when we return from the detail view (ensure that the table view reloads whenever we return from the detail view controller)
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        tableView.reloadData()
-    }
+
     
     // Cell height information - set custom heights for each section
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="128" id="x0Q-z1-uV8" customClass="PersonCell" customModule="Detail" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="372" height="128"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="x0Q-z1-uV8" id="1vg-fk-hRx">
+                <rect key="frame" x="0.0" y="0.0" width="372" height="127.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="803-3J-f8R">
+                        <rect key="frame" x="24" y="19" width="324" height="90"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="72Q-mH-ozm">
+                                <rect key="frame" x="0.0" y="0.0" width="324" height="32.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fdi-FN-Xo5">
+                                <rect key="frame" x="0.0" y="57.5" width="324" height="32.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottomMargin" secondItem="803-3J-f8R" secondAttribute="bottom" constant="8" id="Fm0-XY-wMO"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="803-3J-f8R" secondAttribute="trailing" constant="8" id="XcD-sN-FFe"/>
+                    <constraint firstItem="803-3J-f8R" firstAttribute="leading" secondItem="1vg-fk-hRx" secondAttribute="leadingMargin" constant="8" id="oJD-TB-BnU"/>
+                    <constraint firstItem="803-3J-f8R" firstAttribute="top" secondItem="1vg-fk-hRx" secondAttribute="topMargin" constant="8" id="yvj-kv-KkP"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="cohortLabel" destination="Fdi-FN-Xo5" id="Iug-D6-71u"/>
+                <outlet property="nameLabel" destination="72Q-mH-ozm" id="JHL-KA-eYG"/>
+            </connections>
+            <point key="canvasLocation" x="75.200000000000003" y="48.575712143928037"/>
+        </tableViewCell>
+    </objects>
+</document>

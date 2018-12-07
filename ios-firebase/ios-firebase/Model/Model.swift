@@ -47,7 +47,7 @@ class Model {
             guard success else {return}
             DispatchQueue.main.async { completion()}
         }
-        delegate?.modelDidUpdate()
+        
     }
     
     

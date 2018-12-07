@@ -10,7 +10,7 @@ import Foundation
 
 
 class Firebase<Item: Codable & FirebaseItem> {
-    static var baseURL: URL!  { return URL(string: "https://put-and-post.firebaseio.com/") }
+    static var baseURL: URL!  { return URL(string: "https://detail-firebase.firebaseio.com/") }
     
     static func requestURL(_ method: String, for recordIdentifier: String = "unknownid") -> URL {
         switch method {

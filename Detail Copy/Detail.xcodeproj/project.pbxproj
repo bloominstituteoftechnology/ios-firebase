@@ -22,6 +22,7 @@
 		8E9AA991219C9BDD0012896B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9AA990219C9BDD0012896B /* DetailViewController.swift */; };
 		A262F4CA21B9BD76008BAA23 /* Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A262F4C921B9BD76008BAA23 /* Firebase.swift */; };
 		A262F4CC21B9BDA4008BAA23 /* FirebaseItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A262F4CB21B9BDA4008BAA23 /* FirebaseItem.swift */; };
+		A262F4CE21B9EC60008BAA23 /* untitled.png in Resources */ = {isa = PBXBuildFile; fileRef = A262F4CD21B9EC60008BAA23 /* untitled.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		8E9AA990219C9BDD0012896B /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		A262F4C921B9BD76008BAA23 /* Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Firebase.swift; sourceTree = "<group>"; };
 		A262F4CB21B9BDA4008BAA23 /* FirebaseItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseItem.swift; sourceTree = "<group>"; };
+		A262F4CD21B9EC60008BAA23 /* untitled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = untitled.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 				8E4DE799219C9F3800AFE381 /* Person.swift */,
 				8E9AA97A219C92880012896B /* Main.storyboard */,
 				8E9AA97D219C928B0012896B /* Assets.xcassets */,
+				A262F4CD21B9EC60008BAA23 /* untitled.png */,
 				8E9AA97F219C928B0012896B /* LaunchScreen.storyboard */,
 				8E9AA982219C928B0012896B /* Info.plist */,
 			);
@@ -152,6 +155,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A262F4CE21B9EC60008BAA23 /* untitled.png in Resources */,
 				8E9AA981219C928B0012896B /* LaunchScreen.storyboard in Resources */,
 				8E9AA97E219C928B0012896B /* Assets.xcassets in Resources */,
 				8E9AA98F219C93170012896B /* EntryCell.xib in Resources */,

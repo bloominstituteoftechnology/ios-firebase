@@ -3,6 +3,11 @@ import UIKit
 class EntryCell: UITableViewCell {
     static let reuseIdentifier = "entry cell"
     
+    
+    @IBOutlet weak var cohortAddLabel: UILabel!
+    
+    @IBOutlet weak var nameAddLabel: UILabel!
+    
     @IBOutlet weak var nameField: UITextField!
     
     @IBOutlet weak var cohortField: UITextField!

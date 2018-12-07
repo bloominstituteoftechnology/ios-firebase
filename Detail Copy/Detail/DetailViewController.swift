@@ -5,6 +5,7 @@ class DetailViewController: UIViewController {
     
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var cohortField: UITextField!
+    @IBOutlet weak var quoteLabel: UILabel!
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

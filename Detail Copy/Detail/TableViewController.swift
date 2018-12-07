@@ -17,11 +17,17 @@ class TableViewController: UITableViewController, ModelUpdateClient {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+
         if indexPath.section == 0 {
             // handle the single entry cell
             // return it
             guard let cell = tableView.dequeueReusableCell(withIdentifier: EntryCell.reuseIdentifier, for: indexPath) as? EntryCell
                 else { fatalError("Unable to dequeue entry cell") }
+            
+            cell.contentView.backgroundColor = .gray
+            
+            cell.nameAddLabel.textColor = .white
+            cell.cohortAddLabel.textColor = .white
             
             cell.nameField.text = "" // Coder paranoia
             cell.cohortField.text = ""
@@ -35,7 +41,7 @@ class TableViewController: UITableViewController, ModelUpdateClient {
         
         let person = Model.shared.person(forIndex: indexPath.row)
         cell.nameLabel.text = person.name
-        cell.cohortLabel.text = person.cohort
+        cell.cohortLabel.text = person.cohort        
         return cell
     }
     
@@ -48,6 +54,7 @@ class TableViewController: UITableViewController, ModelUpdateClient {
                 
         DispatchQueue.main.async {
             self.tableView.reloadData()
+            
                 }
             }
         }

@@ -1,0 +1,15 @@
+1. A RESTful Interface is a framework, or "architectural style" used to interact with a database from the internet. It consists of 4 functions: "GET"(read), "PUT"(manipulate/update), "POST"(create) and "DELETE"(need I say it?). Within a RESTful framework it is needful to convert the JSON into code that is readable by your application.
+
+2.POST allows you to create a _new_ entry within the database. PUT allows you to manipulate or update an _existing_ entry within the database.
+
+3.A record ID is a large, unique ID assigned to each entry in the database. It takes two steps to save a record in our app because the first step is creating a new entry within the database and the second step is updating that entry. The update consists of the record ID, which firebase sends to us after we create the entry. In our app we used "GET" to receive this record ID, saved it into a variable in our device struct, and then used "PUT" to update the database to reflect the updated variable. The FrebaseItem protocol exists to so that every class that is assigned this protocol must have the record ID variable.
+
+4. A generic type is flexible as it allows you to use the behavior of any type. Arrays or dictionaries are possible examples of generic type, because until they are declared as conforming to a certain type you can pass any number of elements of the same type, of whatever type, that you want into them. A generic type is reusable in varying contexts.
+
+5. A URLRequest fetches the appropriate URL required to fetch the data using URLSession. You need one when you need to concatenate different elements together?
+
+6.A URL session coordinates data transfer tasks("GET", "PUT", "POST" and "DELETE"). It works by creating multiple "sessions" to coordinate the tasks. These sessions can potentially be run either in the background or the foreground of the application, allowing for user interaction while fetching data or completing other transfer tasks.
+
+7. Completion handlers basically say "do this after this is done". They are useful if you want things to be done asynchronously. For example, if you have an app that is downloading information from the internet, you may want to let the user know that the information has downloaded only _after_ it downloads. To do this you may use a completion handler in the method that initiates the download. They allow for greater freedom and flexibility.
+
+8. Making code modular really helps with code reuse. Using generic types also allow for greater code reuse. A third strategy is having clean, easy-to-understand code.

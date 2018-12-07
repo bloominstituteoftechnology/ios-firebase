@@ -10,7 +10,7 @@ import Foundation
 
 
 class Firebase<Item: Codable & FirebaseItem> {
-    static var baseURL: URL!  { return URL(string: "https://put-and-post.firebaseio.com/") }
+    static var baseURL: URL!  { return URL(string: "https://put-and-post-d7612.firebaseio.com/") }
     
     static func requestURL(_ method: String, for recordIdentifier: String = "unknownid") -> URL {
         switch method {
@@ -120,7 +120,7 @@ class Firebase<Item: Codable & FirebaseItem> {
     static func fetchRecords(completion: @escaping ([Item]?) -> Void) {
         let requestURL = baseURL.appendingPathExtension("json")
         let dataTask = URLSession.shared.dataTask(with: requestURL) { data, _, error in
-
+            
             guard error == nil, let data = data else {
                 // Guaranteed to work
                 if let error = error {

@@ -9,6 +9,7 @@ class DetailViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+         Model.shared.delegate?.modelDidUpdate()
         
         guard let person = person else { return }
         nameField.text = person.name
@@ -20,9 +21,9 @@ class DetailViewController: UIViewController {
         guard let name = nameField.text, !name.isEmpty else { return }
         person.name = name
         person.cohort = cohortField.text ?? ""
+        
         navigationController?.popViewController(animated: true)
-//        Model.shared.updatePerson(at: indexPath) {
-//            self.tableView.reloadData()
-//        }
+        Model.shared.delegate?.modelDidUpdate()
+        Firebase.save(item: person)
     }
 }

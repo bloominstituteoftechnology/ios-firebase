@@ -47,6 +47,7 @@ class TableViewController: UITableViewController, ModelUpdateClient {
         activity.startAnimating()
         navigationItem.titleView = activity
         
+        
         // Fetch records from Firebase and then reload the table view
         // Note: this may be significantly delayed.
         Firebase<Person>.fetchRecords { persons in

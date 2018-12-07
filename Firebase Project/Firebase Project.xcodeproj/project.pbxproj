@@ -7,25 +7,45 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2C0BBEF921B9F3200080AAE5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0BBEF821B9F3200080AAE5 /* AppDelegate.swift */; };
-		2C0BBEFB21B9F3200080AAE5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0BBEFA21B9F3200080AAE5 /* ViewController.swift */; };
-		2C0BBEFE21B9F3210080AAE5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C0BBEFC21B9F3210080AAE5 /* Main.storyboard */; };
-		2C0BBF0021B9F3340080AAE5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C0BBEFF21B9F3340080AAE5 /* Assets.xcassets */; };
-		2C0BBF0321B9F3350080AAE5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C0BBF0121B9F3350080AAE5 /* LaunchScreen.storyboard */; };
+		2C0BBF3521BA80730080AAE5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0BBF3421BA80730080AAE5 /* AppDelegate.swift */; };
+		2C0BBF3C21BA80880080AAE5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C0BBF3B21BA80880080AAE5 /* Assets.xcassets */; };
+		2C0BBF3F21BA80880080AAE5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C0BBF3D21BA80880080AAE5 /* LaunchScreen.storyboard */; };
+		2C0BBF4B21BA80D90080AAE5 /* Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0BBF4A21BA80D90080AAE5 /* Firebase.swift */; };
+		2C0BBF4D21BA81160080AAE5 /* FirebaseItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0BBF4C21BA81160080AAE5 /* FirebaseItem.swift */; };
+		2C0BBF5321BA81540080AAE5 /* EntryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C0BBF4E21BA81540080AAE5 /* EntryCell.xib */; };
+		2C0BBF5421BA81540080AAE5 /* PersonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0BBF4F21BA81540080AAE5 /* PersonCell.swift */; };
+		2C0BBF5521BA81540080AAE5 /* EntryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0BBF5021BA81540080AAE5 /* EntryCell.swift */; };
+		2C0BBF5621BA81540080AAE5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C0BBF5121BA81540080AAE5 /* Main.storyboard */; };
+		2C0BBF5721BA81540080AAE5 /* PersonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C0BBF5221BA81540080AAE5 /* PersonCell.xib */; };
+		2C0BBF5921BA819F0080AAE5 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0BBF5821BA819F0080AAE5 /* Person.swift */; };
+		2C0BBF5B21BA81C00080AAE5 /* ModelUpdateClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0BBF5A21BA81C00080AAE5 /* ModelUpdateClient.swift */; };
+		2C0BBF5D21BA81EB0080AAE5 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0BBF5C21BA81EB0080AAE5 /* Model.swift */; };
+		2C0BBF5F21BA82400080AAE5 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0BBF5E21BA82400080AAE5 /* DetailViewController.swift */; };
+		2C0BBF6121BA82870080AAE5 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0BBF6021BA82870080AAE5 /* TableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2C0BBEF521B9F3200080AAE5 /* Firebase Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Firebase Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2C0BBEF821B9F3200080AAE5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2C0BBEFA21B9F3200080AAE5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		2C0BBEFD21B9F3210080AAE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		2C0BBEFF21B9F3340080AAE5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		2C0BBF0221B9F3350080AAE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		2C0BBF0421B9F3350080AAE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C0BBF3121BA80730080AAE5 /* Firebase Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Firebase Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C0BBF3421BA80730080AAE5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2C0BBF3B21BA80880080AAE5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2C0BBF3E21BA80880080AAE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2C0BBF4021BA80880080AAE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C0BBF4A21BA80D90080AAE5 /* Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Firebase.swift; sourceTree = "<group>"; };
+		2C0BBF4C21BA81160080AAE5 /* FirebaseItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseItem.swift; sourceTree = "<group>"; };
+		2C0BBF4E21BA81540080AAE5 /* EntryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EntryCell.xib; sourceTree = "<group>"; };
+		2C0BBF4F21BA81540080AAE5 /* PersonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonCell.swift; sourceTree = "<group>"; };
+		2C0BBF5021BA81540080AAE5 /* EntryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryCell.swift; sourceTree = "<group>"; };
+		2C0BBF5121BA81540080AAE5 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		2C0BBF5221BA81540080AAE5 /* PersonCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PersonCell.xib; sourceTree = "<group>"; };
+		2C0BBF5821BA819F0080AAE5 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		2C0BBF5A21BA81C00080AAE5 /* ModelUpdateClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelUpdateClient.swift; sourceTree = "<group>"; };
+		2C0BBF5C21BA81EB0080AAE5 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		2C0BBF5E21BA82400080AAE5 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		2C0BBF6021BA82870080AAE5 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		2C0BBEF221B9F3200080AAE5 /* Frameworks */ = {
+		2C0BBF2E21BA80730080AAE5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -35,45 +55,87 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2C0BBEEC21B9F3200080AAE5 = {
+		2C0BBF2821BA80730080AAE5 = {
 			isa = PBXGroup;
 			children = (
-				2C0BBEF721B9F3200080AAE5 /* Firebase Project */,
-				2C0BBEF621B9F3200080AAE5 /* Products */,
+				2C0BBF3321BA80730080AAE5 /* Firebase Project */,
+				2C0BBF3221BA80730080AAE5 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		2C0BBEF621B9F3200080AAE5 /* Products */ = {
+		2C0BBF3221BA80730080AAE5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2C0BBEF521B9F3200080AAE5 /* Firebase Project.app */,
+				2C0BBF3121BA80730080AAE5 /* Firebase Project.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		2C0BBEF721B9F3200080AAE5 /* Firebase Project */ = {
+		2C0BBF3321BA80730080AAE5 /* Firebase Project */ = {
 			isa = PBXGroup;
 			children = (
-				2C0BBEF821B9F3200080AAE5 /* AppDelegate.swift */,
-				2C0BBEFA21B9F3200080AAE5 /* ViewController.swift */,
-				2C0BBEFC21B9F3210080AAE5 /* Main.storyboard */,
-				2C0BBEFF21B9F3340080AAE5 /* Assets.xcassets */,
-				2C0BBF0121B9F3350080AAE5 /* LaunchScreen.storyboard */,
-				2C0BBF0421B9F3350080AAE5 /* Info.plist */,
+				2C0BBF4921BA80C20080AAE5 /* Firebase */,
+				2C0BBF4821BA80B30080AAE5 /* View Controller */,
+				2C0BBF4721BA80AB0080AAE5 /* View */,
+				2C0BBF4621BA80A10080AAE5 /* Model */,
+				2C0BBF3421BA80730080AAE5 /* AppDelegate.swift */,
+				2C0BBF3B21BA80880080AAE5 /* Assets.xcassets */,
+				2C0BBF3D21BA80880080AAE5 /* LaunchScreen.storyboard */,
+				2C0BBF4021BA80880080AAE5 /* Info.plist */,
 			);
 			path = "Firebase Project";
+			sourceTree = "<group>";
+		};
+		2C0BBF4621BA80A10080AAE5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2C0BBF5821BA819F0080AAE5 /* Person.swift */,
+				2C0BBF5A21BA81C00080AAE5 /* ModelUpdateClient.swift */,
+				2C0BBF5C21BA81EB0080AAE5 /* Model.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2C0BBF4721BA80AB0080AAE5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2C0BBF5021BA81540080AAE5 /* EntryCell.swift */,
+				2C0BBF4E21BA81540080AAE5 /* EntryCell.xib */,
+				2C0BBF5121BA81540080AAE5 /* Main.storyboard */,
+				2C0BBF4F21BA81540080AAE5 /* PersonCell.swift */,
+				2C0BBF5221BA81540080AAE5 /* PersonCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2C0BBF4821BA80B30080AAE5 /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2C0BBF6021BA82870080AAE5 /* TableViewController.swift */,
+				2C0BBF5E21BA82400080AAE5 /* DetailViewController.swift */,
+			);
+			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		2C0BBF4921BA80C20080AAE5 /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				2C0BBF4A21BA80D90080AAE5 /* Firebase.swift */,
+				2C0BBF4C21BA81160080AAE5 /* FirebaseItem.swift */,
+			);
+			path = Firebase;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2C0BBEF421B9F3200080AAE5 /* Firebase Project */ = {
+		2C0BBF3021BA80730080AAE5 /* Firebase Project */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2C0BBF0721B9F3350080AAE5 /* Build configuration list for PBXNativeTarget "Firebase Project" */;
+			buildConfigurationList = 2C0BBF4321BA80880080AAE5 /* Build configuration list for PBXNativeTarget "Firebase Project" */;
 			buildPhases = (
-				2C0BBEF121B9F3200080AAE5 /* Sources */,
-				2C0BBEF221B9F3200080AAE5 /* Frameworks */,
-				2C0BBEF321B9F3200080AAE5 /* Resources */,
+				2C0BBF2D21BA80730080AAE5 /* Sources */,
+				2C0BBF2E21BA80730080AAE5 /* Frameworks */,
+				2C0BBF2F21BA80730080AAE5 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -81,25 +143,25 @@
 			);
 			name = "Firebase Project";
 			productName = "Firebase Project";
-			productReference = 2C0BBEF521B9F3200080AAE5 /* Firebase Project.app */;
+			productReference = 2C0BBF3121BA80730080AAE5 /* Firebase Project.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		2C0BBEED21B9F3200080AAE5 /* Project object */ = {
+		2C0BBF2921BA80730080AAE5 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1010;
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Ivan Caldwell";
 				TargetAttributes = {
-					2C0BBEF421B9F3200080AAE5 = {
+					2C0BBF3021BA80730080AAE5 = {
 						CreatedOnToolsVersion = 10.1;
 					};
 				};
 			};
-			buildConfigurationList = 2C0BBEF021B9F3200080AAE5 /* Build configuration list for PBXProject "Firebase Project" */;
+			buildConfigurationList = 2C0BBF2C21BA80730080AAE5 /* Build configuration list for PBXProject "Firebase Project" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -107,54 +169,56 @@
 				en,
 				Base,
 			);
-			mainGroup = 2C0BBEEC21B9F3200080AAE5;
-			productRefGroup = 2C0BBEF621B9F3200080AAE5 /* Products */;
+			mainGroup = 2C0BBF2821BA80730080AAE5;
+			productRefGroup = 2C0BBF3221BA80730080AAE5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2C0BBEF421B9F3200080AAE5 /* Firebase Project */,
+				2C0BBF3021BA80730080AAE5 /* Firebase Project */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		2C0BBEF321B9F3200080AAE5 /* Resources */ = {
+		2C0BBF2F21BA80730080AAE5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C0BBF0321B9F3350080AAE5 /* LaunchScreen.storyboard in Resources */,
-				2C0BBF0021B9F3340080AAE5 /* Assets.xcassets in Resources */,
-				2C0BBEFE21B9F3210080AAE5 /* Main.storyboard in Resources */,
+				2C0BBF5321BA81540080AAE5 /* EntryCell.xib in Resources */,
+				2C0BBF5621BA81540080AAE5 /* Main.storyboard in Resources */,
+				2C0BBF5721BA81540080AAE5 /* PersonCell.xib in Resources */,
+				2C0BBF3F21BA80880080AAE5 /* LaunchScreen.storyboard in Resources */,
+				2C0BBF3C21BA80880080AAE5 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		2C0BBEF121B9F3200080AAE5 /* Sources */ = {
+		2C0BBF2D21BA80730080AAE5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C0BBEFB21B9F3200080AAE5 /* ViewController.swift in Sources */,
-				2C0BBEF921B9F3200080AAE5 /* AppDelegate.swift in Sources */,
+				2C0BBF5D21BA81EB0080AAE5 /* Model.swift in Sources */,
+				2C0BBF4B21BA80D90080AAE5 /* Firebase.swift in Sources */,
+				2C0BBF5421BA81540080AAE5 /* PersonCell.swift in Sources */,
+				2C0BBF4D21BA81160080AAE5 /* FirebaseItem.swift in Sources */,
+				2C0BBF5921BA819F0080AAE5 /* Person.swift in Sources */,
+				2C0BBF6121BA82870080AAE5 /* TableViewController.swift in Sources */,
+				2C0BBF5B21BA81C00080AAE5 /* ModelUpdateClient.swift in Sources */,
+				2C0BBF5F21BA82400080AAE5 /* DetailViewController.swift in Sources */,
+				2C0BBF5521BA81540080AAE5 /* EntryCell.swift in Sources */,
+				2C0BBF3521BA80730080AAE5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		2C0BBEFC21B9F3210080AAE5 /* Main.storyboard */ = {
+		2C0BBF3D21BA80880080AAE5 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				2C0BBEFD21B9F3210080AAE5 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		2C0BBF0121B9F3350080AAE5 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2C0BBF0221B9F3350080AAE5 /* Base */,
+				2C0BBF3E21BA80880080AAE5 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -162,7 +226,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		2C0BBF0521B9F3350080AAE5 /* Debug */ = {
+		2C0BBF4121BA80880080AAE5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -223,7 +287,7 @@
 			};
 			name = Debug;
 		};
-		2C0BBF0621B9F3350080AAE5 /* Release */ = {
+		2C0BBF4221BA80880080AAE5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -278,7 +342,7 @@
 			};
 			name = Release;
 		};
-		2C0BBF0821B9F3350080AAE5 /* Debug */ = {
+		2C0BBF4421BA80880080AAE5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -295,7 +359,7 @@
 			};
 			name = Debug;
 		};
-		2C0BBF0921B9F3350080AAE5 /* Release */ = {
+		2C0BBF4521BA80880080AAE5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -315,25 +379,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2C0BBEF021B9F3200080AAE5 /* Build configuration list for PBXProject "Firebase Project" */ = {
+		2C0BBF2C21BA80730080AAE5 /* Build configuration list for PBXProject "Firebase Project" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2C0BBF0521B9F3350080AAE5 /* Debug */,
-				2C0BBF0621B9F3350080AAE5 /* Release */,
+				2C0BBF4121BA80880080AAE5 /* Debug */,
+				2C0BBF4221BA80880080AAE5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2C0BBF0721B9F3350080AAE5 /* Build configuration list for PBXNativeTarget "Firebase Project" */ = {
+		2C0BBF4321BA80880080AAE5 /* Build configuration list for PBXNativeTarget "Firebase Project" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2C0BBF0821B9F3350080AAE5 /* Debug */,
-				2C0BBF0921B9F3350080AAE5 /* Release */,
+				2C0BBF4421BA80880080AAE5 /* Debug */,
+				2C0BBF4521BA80880080AAE5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 2C0BBEED21B9F3200080AAE5 /* Project object */;
+	rootObject = 2C0BBF2921BA80730080AAE5 /* Project object */;
 }

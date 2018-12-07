@@ -1,6 +1,22 @@
 import UIKit
 
 class TableViewController: UITableViewController, ModelUpdateClient {
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        Firebase<Person>.fetchRecords { persons in
+            if let persons = persons {
+                Model.shared.persons = persons
+                
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                    
+                }
+            }
+        }
+    }
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 2
     }
@@ -38,15 +54,17 @@ class TableViewController: UITableViewController, ModelUpdateClient {
         cell.cohortLabel.text = person.cohort
         return cell
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        tableView.reloadData()
+   
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         
-        Firebase<Person>.fetchRecords { persons in
-            
+        guard editingStyle == .delete else { return }
+        
+        // FIXME: Delete an item, update Firebase, update model, and reload data
+        Model.shared.deletePerson(at: indexPath) {
+            self.tableView.reloadData()
         }
     }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

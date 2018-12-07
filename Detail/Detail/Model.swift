@@ -5,7 +5,7 @@ class Model {
     private init() {}
     var delegate: ModelUpdateClient?
     
-    private var persons: [Person] = []
+    var persons: [Person] = []
     
     func count() -> Int {
         return persons.count
@@ -22,7 +22,9 @@ class Model {
             guard success else { return }
             DispatchQueue.main.async { completion() }
         }
+        delegate?.modelDidUpdate()
     }
+    
     func deletePerson(at indexPath: IndexPath, completion: @escaping () -> Void) {
         let person = persons[indexPath.row]
         //in local model
@@ -33,16 +35,21 @@ class Model {
             guard success else { return }
             DispatchQueue.main.async { completion() }
         }
+       // delegate?.modelDidUpdate()
+
     }
     
-    func updatePerson(at indexPath: IndexPath, completion: @escaping () -> Void) {
+    func updatePerson(for person: Person, completion: @escaping () -> Void) {
         //in local model
-        let person = persons[indexPath.row]
+        //update without the index path, updating in detail so no indexPath
+        //let person = persons[indexPath.row]
 
         //in firebase
         Firebase<Person>.save(item: person) { success in
             guard success else { return }
             DispatchQueue.main.async { completion() }
         }
+        //delegate?.modelDidUpdate()
+
     }
 }

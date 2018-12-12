@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4887B6C421C1B3CB0034376D /* FirebaseItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4887B6C221C1B3CB0034376D /* FirebaseItem.swift */; };
+		4887B6C521C1B3CB0034376D /* Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4887B6C321C1B3CB0034376D /* Firebase.swift */; };
 		8E4DE798219C9EB200AFE381 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4DE797219C9EB200AFE381 /* Model.swift */; };
 		8E4DE79A219C9F3800AFE381 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4DE799219C9F3800AFE381 /* Person.swift */; };
 		8E4DE79C219CA16500AFE381 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4DE79B219CA16500AFE381 /* TableViewController.swift */; };
@@ -23,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4887B6C221C1B3CB0034376D /* FirebaseItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FirebaseItem.swift; path = ../../FirebaseItem.swift; sourceTree = "<group>"; };
+		4887B6C321C1B3CB0034376D /* Firebase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Firebase.swift; path = ../../Firebase.swift; sourceTree = "<group>"; };
 		8E4DE797219C9EB200AFE381 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		8E4DE799219C9F3800AFE381 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		8E4DE79B219CA16500AFE381 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
@@ -71,6 +75,8 @@
 			isa = PBXGroup;
 			children = (
 				8E9AA976219C92880012896B /* AppDelegate.swift */,
+				4887B6C321C1B3CB0034376D /* Firebase.swift */,
+				4887B6C221C1B3CB0034376D /* FirebaseItem.swift */,
 				8E9AA988219C92CB0012896B /* PersonCell.swift */,
 				8E9AA98C219C93100012896B /* PersonCell.xib */,
 				8E9AA98A219C92D50012896B /* EntryCell.swift */,
@@ -161,9 +167,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4887B6C521C1B3CB0034376D /* Firebase.swift in Sources */,
 				8E4DE79A219C9F3800AFE381 /* Person.swift in Sources */,
 				8E4DE79C219CA16500AFE381 /* TableViewController.swift in Sources */,
 				8E4DE798219C9EB200AFE381 /* Model.swift in Sources */,
+				4887B6C421C1B3CB0034376D /* FirebaseItem.swift in Sources */,
 				8E9AA989219C92CB0012896B /* PersonCell.swift in Sources */,
 				8E9AA98B219C92D50012896B /* EntryCell.swift in Sources */,
 				8E4DE79E219CAA7700AFE381 /* ModelUpdateClient.swift in Sources */,

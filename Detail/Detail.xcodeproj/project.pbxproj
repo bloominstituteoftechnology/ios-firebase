@@ -20,6 +20,8 @@
 		8E9AA98D219C93100012896B /* PersonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E9AA98C219C93100012896B /* PersonCell.xib */; };
 		8E9AA98F219C93170012896B /* EntryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E9AA98E219C93170012896B /* EntryCell.xib */; };
 		8E9AA991219C9BDD0012896B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9AA990219C9BDD0012896B /* DetailViewController.swift */; };
+		F81A64A921C1B1EB005F5125 /* Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81A64A821C1B1EB005F5125 /* Firebase.swift */; };
+		F81A64AB21C1B1F4005F5125 /* FirebaseItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81A64AA21C1B1F4005F5125 /* FirebaseItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		8E9AA98C219C93100012896B /* PersonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonCell.xib; sourceTree = "<group>"; };
 		8E9AA98E219C93170012896B /* EntryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EntryCell.xib; sourceTree = "<group>"; };
 		8E9AA990219C9BDD0012896B /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		F81A64A821C1B1EB005F5125 /* Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Firebase.swift; sourceTree = "<group>"; };
+		F81A64AA21C1B1F4005F5125 /* FirebaseItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,22 +74,56 @@
 		8E9AA975219C92880012896B /* Detail */ = {
 			isa = PBXGroup;
 			children = (
-				8E9AA976219C92880012896B /* AppDelegate.swift */,
+				8E9AA97A219C92880012896B /* Main.storyboard */,
+				F81A64AE21C1B353005F5125 /* Other */,
+				F81A64AC21C1B30B005F5125 /* Cells */,
+				F81A64AD21C1B33B005F5125 /* View Controllers */,
+				F81A64AF21C1B375005F5125 /* Model and Classes */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		F81A64AC21C1B30B005F5125 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
 				8E9AA988219C92CB0012896B /* PersonCell.swift */,
 				8E9AA98C219C93100012896B /* PersonCell.xib */,
 				8E9AA98A219C92D50012896B /* EntryCell.swift */,
 				8E9AA98E219C93170012896B /* EntryCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		F81A64AD21C1B33B005F5125 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
 				8E9AA990219C9BDD0012896B /* DetailViewController.swift */,
 				8E4DE79B219CA16500AFE381 /* TableViewController.swift */,
-				8E4DE797219C9EB200AFE381 /* Model.swift */,
-				8E4DE79D219CAA7700AFE381 /* ModelUpdateClient.swift */,
-				8E4DE799219C9F3800AFE381 /* Person.swift */,
-				8E9AA97A219C92880012896B /* Main.storyboard */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		F81A64AE21C1B353005F5125 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				8E9AA976219C92880012896B /* AppDelegate.swift */,
 				8E9AA97D219C928B0012896B /* Assets.xcassets */,
 				8E9AA97F219C928B0012896B /* LaunchScreen.storyboard */,
 				8E9AA982219C928B0012896B /* Info.plist */,
 			);
-			path = Detail;
+			path = Other;
+			sourceTree = "<group>";
+		};
+		F81A64AF21C1B375005F5125 /* Model and Classes */ = {
+			isa = PBXGroup;
+			children = (
+				8E4DE797219C9EB200AFE381 /* Model.swift */,
+				8E4DE79D219CAA7700AFE381 /* ModelUpdateClient.swift */,
+				8E4DE799219C9F3800AFE381 /* Person.swift */,
+				F81A64A821C1B1EB005F5125 /* Firebase.swift */,
+				F81A64AA21C1B1F4005F5125 /* FirebaseItem.swift */,
+			);
+			path = "Model and Classes";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,7 +204,9 @@
 				8E4DE798219C9EB200AFE381 /* Model.swift in Sources */,
 				8E9AA989219C92CB0012896B /* PersonCell.swift in Sources */,
 				8E9AA98B219C92D50012896B /* EntryCell.swift in Sources */,
+				F81A64AB21C1B1F4005F5125 /* FirebaseItem.swift in Sources */,
 				8E4DE79E219CAA7700AFE381 /* ModelUpdateClient.swift in Sources */,
+				F81A64A921C1B1EB005F5125 /* Firebase.swift in Sources */,
 				8E9AA977219C92880012896B /* AppDelegate.swift in Sources */,
 				8E9AA991219C9BDD0012896B /* DetailViewController.swift in Sources */,
 			);
@@ -315,8 +355,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2W4DVPEQ39;
-				INFOPLIST_FILE = Detail/Info.plist;
+				DEVELOPMENT_TEAM = 6Y6994DAGM;
+				INFOPLIST_FILE = "$(SRCROOT)/Detail/Other/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -333,8 +373,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2W4DVPEQ39;
-				INFOPLIST_FILE = Detail/Info.plist;
+				DEVELOPMENT_TEAM = 6Y6994DAGM;
+				INFOPLIST_FILE = "$(SRCROOT)/Detail/Other/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

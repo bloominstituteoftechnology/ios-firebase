@@ -58,6 +58,19 @@ class TableViewController: UITableViewController, ModelUpdateClient {
     func modelDidUpdate() {
         tableView.reloadData()
     }
+    //update on firebase
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        Model.shared.updatePerson(at: indexPath) {
+            self.tableView.reloadData()
+        }
+    }
+    //update on firebase
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        guard editingStyle == .delete else {return}
+        Model.shared.delete(at: indexPath) {
+            self.tableView.reloadData()
+        }
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let indexPath = tableView.indexPathForSelectedRow

@@ -1,12 +1,13 @@
 import UIKit
 
-// 
 class PersonTableViewController: UITableViewController {
     
+    // Number of sections
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 2
     }
     
+    // Number of rows
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // switch statement
         switch section {
@@ -19,6 +20,7 @@ class PersonTableViewController: UITableViewController {
         }
     }
     
+    // Cell contents
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
             // get a cell
@@ -33,7 +35,7 @@ class PersonTableViewController: UITableViewController {
         
         // put information into the person cell - populating the person cell
         // grab a person
-        let person = Model.shared.person(at: indexPath.row)
+        let person = Model.shared.person(at: indexPath)
         cell.nameLabel.text = person.name
         cell.cohortLabel.text = person.cohort
         
@@ -49,7 +51,7 @@ class PersonTableViewController: UITableViewController {
         guard let name = cell.nameField.text, !name.isEmpty
             else { return }
         
-        // If nil, set it to the empty string (ensure that we ahve a string and not nil
+        // If nil, set it to the empty string (ensure that we have a string and not nil
         let cohort = cell.cohortField.text ?? ""
         
         // construct a person
@@ -59,11 +61,20 @@ class PersonTableViewController: UITableViewController {
         cell.nameField.text = ""
         cell.cohortField.text = ""
         
-        // add to the model
-        Model.shared.add(person: person)
-        // update our table view
-        tableView.reloadData()
+        // add to the model and firebase
+        Model.shared.addNewPerson(person: person) {
+            // update the table view
+            self.tableView.reloadData()
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        guard editingStyle == .delete else { return }
         
+        // Local and Remote by calling the model's function
+        Model.shared.removePerson(at: indexPath) {
+            self.tableView.reloadData()
+        }
     }
     
     // reload when we return from the detail view (ensure that the table view reloads whenever we return from the detail view controller)
@@ -93,7 +104,7 @@ class PersonTableViewController: UITableViewController {
             let indexPath = tableView.indexPathForSelectedRow
             else { return }
         
-        let person = Model.shared.person(at: indexPath.row)
+        let person = Model.shared.person(at: indexPath)
         destination.person = person
     }
     

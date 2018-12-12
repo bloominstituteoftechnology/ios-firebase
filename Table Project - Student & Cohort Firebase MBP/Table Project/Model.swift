@@ -9,35 +9,76 @@ class Model {
     // Store our people
     var people: [Person] = []
     
-    // Basic information that helps our model to manage people and add to our table
-    
+
     // MARK: - Model Management (CRUD)
-    
-    // add person - C
-    func add(person: Person) {
-        people.append(person)
-        saveData()
-    }
-    
-    // remove person - D
-    func remove(personAtIndex index: Int) {
-        people.remove(at: index)
-        saveData()
-    }
+    // Basic information that helps our model to manage people and add to our table
     
     // count - R
     func numberOfPeople() -> Int {
         return people.count
     }
     
+    // find which person is at an index - R
+    func person(at indexPath: IndexPath) -> Person {
+        return people[indexPath.row]
+    }
+        //func person(at index: Int) -> Person {
+            //return people[index]
+        //}
+    
     // move - U
     func movePerson(at index: Int, to newIndex: Int) {
         // TODO: Implement this
     }
     
-    // find which person is at an index - R
-    func person(at index: Int) -> Person {
-        return people[index]
+    // Set people to the array
+    func setPeople( _ people: [Person]) {
+        self.people = people
+    }
+
+    // MARK: Core Database Management Methods
+    
+    // add person - C
+    func addNewPerson(person: Person, completion: @escaping () -> Void) {
+       
+        // Local: append to our people array on the model
+        people.append(person)
+        
+        // Remote: save it by sending to firebase
+        Firebase<Person>.save(item: person) { success in
+            guard success else { return }
+            
+            DispatchQueue.main.async { completion() }
+        }
+    }
+    
+    // remove person - D
+    func removePerson(at indexPath: IndexPath, completion: @escaping () -> Void) {
+        
+        // Get a person
+        let person = people[indexPath.row]
+        
+        // Local
+        people.remove(at: indexPath.row)
+        
+        // Remote
+        Firebase<Person>.delete(item: person) { success in
+            guard success else { return }
+            
+            DispatchQueue.main.async { completion() }
+        }
+    }
+    
+    // Call this to update any changes that were made in the detail view on Firebase
+    func updatePerson(person: Person, indexPath: IndexPath, completion: @escaping () -> Void) {
+        
+        // Remote
+        Firebase<Person>.save(item: person) { success in
+            guard success else { return }
+            
+            DispatchQueue.main.async { completion() }
+        }
+        
     }
     
     // MARK: Data Persistence

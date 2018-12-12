@@ -1,8 +1,29 @@
 import UIKit
 
 class TableViewController: UITableViewController, ModelUpdateClient {
+    func modelDidUpdate() {
+        tableView.reloadData()
+    }
     
     
+    @objc func refresh() {
+        Firebase<Person>.fetchRecords { persons in
+            if let persons = persons {
+                Model.shared.persons = persons
+                
+                
+                // Comment this out to show what it looks like while waiting
+                
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+            self.navigationItem.rightBarButtonItem?.isEnabled = true
+            self.navigationItem.titleView = nil
+            self.title = "Persons"
+            self.refreshControl?.endRefreshing()
+        }
+    }
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         Model.shared.delegate = self
@@ -14,20 +35,13 @@ class TableViewController: UITableViewController, ModelUpdateClient {
         
         // Fetch records from Firebase and then reload the table view
         // Note: this may be significantly delayed.
-        Firebase<Person>.fetchRecords { persons in
-            if let persons = persons {
-                Model.shared.persons = persons
-                
-                // Comment this out to show what it looks like while waiting
-                DispatchQueue.main.async {
-                    self.tableView.reloadData()
-                    self.navigationItem.rightBarButtonItem?.isEnabled = true
-                    self.navigationItem.titleView = nil
-                    self.title = "Persons"
-                }
+        
+                    
+                let refreshControl = UIRefreshControl()
+                refreshControl.addTarget(self, action:  #selector(self.refresh), for: UIControl.Event.valueChanged)
+                self.refreshControl = refreshControl
+                     refresh()
             }
-        }
-    }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 2
@@ -68,6 +82,7 @@ class TableViewController: UITableViewController, ModelUpdateClient {
             
             return cell
         }
+
         
         // do anything related to person cell
         guard let cell = tableView.dequeueReusableCell(withIdentifier: PersonCell.reuseIdentifier, for: indexPath) as? PersonCell
@@ -78,6 +93,7 @@ class TableViewController: UITableViewController, ModelUpdateClient {
         cell.cohortLabel.text = person.cohort
         return cell
     }
+
     
    
     
@@ -86,11 +102,7 @@ class TableViewController: UITableViewController, ModelUpdateClient {
 //        Model.shared.delegate = self
 //    }
        
-     
-    
-    func modelDidUpdate() {
-        tableView.reloadData()
-    }
+
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let indexPath = tableView.indexPathForSelectedRow
@@ -100,4 +112,5 @@ class TableViewController: UITableViewController, ModelUpdateClient {
         
         destination.person = Model.shared.person(forIndex: indexPath.row)
     }
+
 }

@@ -40,6 +40,8 @@ class TableViewController: UITableViewController, ModelUpdateClient {
                 let refreshControl = UIRefreshControl()
                 refreshControl.addTarget(self, action:  #selector(self.refresh), for: UIControl.Event.valueChanged)
                 self.refreshControl = refreshControl
+        refreshControl.tintColor = UIColor(red:1.25, green:0.72, blue:0.85, alpha:1.0)
+        refreshControl.attributedTitle = NSAttributedString(string: "Pull To Refresh")
                      refresh()
             }
     

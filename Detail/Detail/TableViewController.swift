@@ -1,6 +1,14 @@
 import UIKit
 
 class TableViewController: UITableViewController, ModelUpdateClient {
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
+        
+        
+    }
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 2
     }
@@ -38,12 +46,7 @@ class TableViewController: UITableViewController, ModelUpdateClient {
         cell.cohortLabel.text = person.cohort
         return cell
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        tableView.reloadData()
-    }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         Model.shared.delegate = self

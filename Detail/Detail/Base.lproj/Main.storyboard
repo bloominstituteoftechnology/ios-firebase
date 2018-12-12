@@ -26,11 +26,11 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="211.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="ChK-91-DHZ">
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="ChK-91-DHZ">
                                             <rect key="frame" x="24" y="19" width="327" height="174"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="lastBaseline" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="VWj-R4-xEp">
-                                                    <rect key="frame" x="0.0" y="0.0" width="327" height="24"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="327" height="58"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EQs-LW-4JA">
                                                             <rect key="frame" x="0.0" y="3.5" width="58" height="20.5"/>
@@ -47,7 +47,7 @@
                                                     </subviews>
                                                 </stackView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="lastBaseline" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Gl6-TP-YhJ">
-                                                    <rect key="frame" x="0.0" y="73.5" width="327" height="24"/>
+                                                    <rect key="frame" x="0.0" y="58" width="327" height="58"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cohort:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LYK-24-Fkh">
                                                             <rect key="frame" x="0.0" y="3.5" width="58" height="20.5"/>
@@ -65,7 +65,7 @@
                                                     <viewLayoutGuide key="safeArea" id="wkb-We-446"/>
                                                 </stackView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UGy-ry-vJ2">
-                                                    <rect key="frame" x="0.0" y="144" width="327" height="30"/>
+                                                    <rect key="frame" x="0.0" y="116" width="327" height="58"/>
                                                     <state key="normal" title="Add"/>
                                                     <connections>
                                                         <action selector="add:" destination="CPZ-m0-xA7" eventType="touchUpInside" id="kIg-sd-aLv"/>
@@ -148,11 +148,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="6o4-oi-WbL">
-                                <rect key="frame" x="8" y="293" width="359" height="81"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="6o4-oi-WbL">
+                                <rect key="frame" x="8" y="268.5" width="359" height="130"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="lastBaseline" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="MHJ-Og-V35">
-                                        <rect key="frame" x="0.0" y="0.0" width="359" height="24"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="359" height="30"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DOH-Xi-wv2">
                                                 <rect key="frame" x="0.0" y="3.5" width="58" height="20.5"/>
@@ -169,7 +169,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="lastBaseline" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="RVK-Cb-6ud">
-                                        <rect key="frame" x="0.0" y="27" width="359" height="24"/>
+                                        <rect key="frame" x="0.0" y="50" width="359" height="30"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cohort:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gZr-Lg-677">
                                                 <rect key="frame" x="0.0" y="3.5" width="58" height="20.5"/>
@@ -187,7 +187,7 @@
                                         <viewLayoutGuide key="safeArea" id="3ox-18-Pan"/>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ueR-DL-Hzl">
-                                        <rect key="frame" x="0.0" y="51" width="359" height="30"/>
+                                        <rect key="frame" x="0.0" y="100" width="359" height="30"/>
                                         <state key="normal" title="Save"/>
                                         <connections>
                                             <action selector="save:" destination="85a-XO-wIQ" eventType="touchUpInside" id="7qc-IJ-V97"/>
@@ -214,7 +214,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mhc-xq-dun" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="606" y="-27"/>
+            <point key="canvasLocation" x="564" y="-27"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Rlw-hX-I0W">
@@ -230,7 +230,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h7F-nd-b67" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1094" y="-26"/>
+            <point key="canvasLocation" x="-854" y="-27"/>
         </scene>
     </scenes>
 </document>

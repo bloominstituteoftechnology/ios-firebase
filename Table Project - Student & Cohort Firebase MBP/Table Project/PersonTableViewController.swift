@@ -2,19 +2,28 @@ import UIKit
 
 class PersonTableViewController: UITableViewController {
     
+    let deviceRefreshControl = UIRefreshControl()
+    
     // Table View's initial load
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        Firebase<Person>.fetchRecords { people in
-            if let people = people {
-                Model.shared.setPeople(people)
-                
-                DispatchQueue.main.async {
-                    self.tableView.reloadData()
-                }
-            }
-        }
+        // Cosmetic Elements
+        // while loading, don't let user tap 'add' button
+        //addButtonOutlet.isEnabled = false
+        
+        // Let user know that data is loading
+        let activity = UIActivityIndicatorView()
+        // Set the activity view to gray
+        activity.style = .gray
+        // Start animating the activity view
+        activity.startAnimating()
+        // Set the title view to be the activity indicator
+        navigationItem.titleView = activity
+
+        
+        // Call function that fetches data from Firebase
+        refreshDevices()
         
     }
     
@@ -123,6 +132,26 @@ class PersonTableViewController: UITableViewController {
         
         let person = Model.shared.person(at: indexPath)
         destination.person = person
+    }
+    
+    @objc func refreshDevices() {
+        // Fetch records from Firebase and reload the table view
+        Firebase<Person>.fetchRecords { people in
+            if let people = people {
+                Model.shared.setPeople(people)
+                
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                    
+                    // When done with the request, re-enable the view
+                    //self.addButtonOutlet.isEnabled = true
+                    self.navigationItem.titleView = nil
+                    self.title = "Lambda Students"
+                    self.deviceRefreshControl.endRefreshing()
+                    
+                }
+            }
+        }
     }
     
 }

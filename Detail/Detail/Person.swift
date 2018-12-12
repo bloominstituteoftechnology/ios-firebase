@@ -1,11 +1,8 @@
 import Foundation
 
-class Person: Codable, FirebaseItem {
-    
+class Person {
     var name: String
     var cohort: String
-    var recordIdentifier = ""
-
     
     init(name: String, cohort: String) {
         (self.name, self.cohort) = (name, cohort)

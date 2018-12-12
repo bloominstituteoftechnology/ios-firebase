@@ -19,8 +19,6 @@ class DetailViewController: UIViewController {
         guard let name = nameField.text, !name.isEmpty else { return }
         person.name = name
         person.cohort = cohortField.text ?? ""
-        Model.shared.add(person: person, completion: {})
-
         navigationController?.popViewController(animated: true)
     }
 }

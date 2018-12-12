@@ -2,11 +2,14 @@ import UIKit
 
 class TableViewController: UITableViewController, ModelUpdateClient {
     
+    let reuseIdentifier = "cell"
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        tableView.reloadData()
         
-        
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {

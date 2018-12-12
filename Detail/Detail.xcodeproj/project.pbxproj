@@ -20,8 +20,8 @@
 		8E9AA98D219C93100012896B /* PersonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E9AA98C219C93100012896B /* PersonCell.xib */; };
 		8E9AA98F219C93170012896B /* EntryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E9AA98E219C93170012896B /* EntryCell.xib */; };
 		8E9AA991219C9BDD0012896B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9AA990219C9BDD0012896B /* DetailViewController.swift */; };
-		A231D96D21C1B46F0098E553 /* FirebaseItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A231D96B21C1B46F0098E553 /* FirebaseItem.swift */; };
-		A231D96E21C1B46F0098E553 /* Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A231D96C21C1B46F0098E553 /* Firebase.swift */; };
+		A2250C8D21C1CC5400CCC715 /* FirebaseItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2250C8B21C1CC5400CCC715 /* FirebaseItem.swift */; };
+		A2250C8E21C1CC5400CCC715 /* Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2250C8C21C1CC5400CCC715 /* Firebase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,8 +40,8 @@
 		8E9AA98C219C93100012896B /* PersonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonCell.xib; sourceTree = "<group>"; };
 		8E9AA98E219C93170012896B /* EntryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EntryCell.xib; sourceTree = "<group>"; };
 		8E9AA990219C9BDD0012896B /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		A231D96B21C1B46F0098E553 /* FirebaseItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseItem.swift; sourceTree = "<group>"; };
-		A231D96C21C1B46F0098E553 /* Firebase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Firebase.swift; sourceTree = "<group>"; };
+		A2250C8B21C1CC5400CCC715 /* FirebaseItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FirebaseItem.swift; path = ../../../Devices/Devices/FirebaseItem.swift; sourceTree = "<group>"; };
+		A2250C8C21C1CC5400CCC715 /* Firebase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Firebase.swift; path = ../../../Devices/Devices/Firebase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,9 +81,9 @@
 				8E9AA98E219C93170012896B /* EntryCell.xib */,
 				8E9AA990219C9BDD0012896B /* DetailViewController.swift */,
 				8E4DE79B219CA16500AFE381 /* TableViewController.swift */,
-				A231D96C21C1B46F0098E553 /* Firebase.swift */,
-				A231D96B21C1B46F0098E553 /* FirebaseItem.swift */,
 				8E4DE797219C9EB200AFE381 /* Model.swift */,
+				A2250C8C21C1CC5400CCC715 /* Firebase.swift */,
+				A2250C8B21C1CC5400CCC715 /* FirebaseItem.swift */,
 				8E4DE79D219CAA7700AFE381 /* ModelUpdateClient.swift */,
 				8E4DE799219C9F3800AFE381 /* Person.swift */,
 				8E9AA97A219C92880012896B /* Main.storyboard */,
@@ -167,11 +167,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A231D96E21C1B46F0098E553 /* Firebase.swift in Sources */,
+				A2250C8E21C1CC5400CCC715 /* Firebase.swift in Sources */,
 				8E4DE79A219C9F3800AFE381 /* Person.swift in Sources */,
 				8E4DE79C219CA16500AFE381 /* TableViewController.swift in Sources */,
 				8E4DE798219C9EB200AFE381 /* Model.swift in Sources */,
-				A231D96D21C1B46F0098E553 /* FirebaseItem.swift in Sources */,
+				A2250C8D21C1CC5400CCC715 /* FirebaseItem.swift in Sources */,
 				8E9AA989219C92CB0012896B /* PersonCell.swift in Sources */,
 				8E9AA98B219C92D50012896B /* EntryCell.swift in Sources */,
 				8E4DE79E219CAA7700AFE381 /* ModelUpdateClient.swift in Sources */,

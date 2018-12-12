@@ -2,6 +2,7 @@ import UIKit
 
 class DetailViewController: UIViewController {
     var person: Person?
+    var indexPath: IndexPath?
     
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var cohortField: UITextField!
@@ -20,5 +21,8 @@ class DetailViewController: UIViewController {
         person.name = name
         person.cohort = cohortField.text ?? ""
         navigationController?.popViewController(animated: true)
+        Model.shared.updatePerson(at: indexPath!) {
+            return
+        }
     }
 }

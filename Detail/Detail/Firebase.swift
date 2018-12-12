@@ -120,7 +120,7 @@ class Firebase<Item: Codable & FirebaseItem> {
     static func fetchRecords(completion: @escaping ([Item]?) -> Void) {
         let requestURL = baseURL.appendingPathExtension("json")
         let dataTask = URLSession.shared.dataTask(with: requestURL) { data, _, error in
-
+            
             guard error == nil, let data = data else {
                 // Guaranteed to work
                 if let error = error {

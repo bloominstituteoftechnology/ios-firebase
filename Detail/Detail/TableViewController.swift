@@ -39,6 +39,14 @@ class TableViewController: UITableViewController, ModelUpdateClient {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        guard editingStyle == .delete else {return}
+        
+        Model.shared.removePerson(indexPath: indexPath) {
+            tableView.reloadData()
+        }
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         tableView.reloadData()
@@ -47,6 +55,14 @@ class TableViewController: UITableViewController, ModelUpdateClient {
     override func viewDidLoad() {
         super.viewDidLoad()
         Model.shared.delegate = self
+        Firebase<Person>.fetchRecords { persons in
+            if let persons = persons {
+                Model.shared.persons = persons
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+            }
+        }
     }
     
     func modelDidUpdate() {
@@ -60,5 +76,6 @@ class TableViewController: UITableViewController, ModelUpdateClient {
             else { return }
         
         destination.person = Model.shared.person(forIndex: indexPath.row)
+        destination.indexPath = indexPath
     }
 }

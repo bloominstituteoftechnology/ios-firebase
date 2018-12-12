@@ -35,6 +35,8 @@ class Model {
         //local change
         let person = persons[indexPath.row]
         persons.remove(at: indexPath.row)
+        delegate?.modelDidUpdate()
+
         
         //in firebase change
         Firebase<Person>.delete(item: person) { success in
@@ -46,6 +48,8 @@ class Model {
     func updatePerson(at indexPath: IndexPath, completion: @escaping () -> Void) {
         //local
         let person = persons[indexPath.row]
+        delegate?.modelDidUpdate()
+
         
         //firebase
         Firebase<Person>.save(item: person) { success in

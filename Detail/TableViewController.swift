@@ -3,13 +3,14 @@ import UIKit
 class TableViewController: UITableViewController, ModelUpdateClient {
     
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-//        navigationItem.rightBarButtonItem?.isEnabled = false
-//        let activity = UIActivityIndicatorView()
-//        activity.style = .gray
-//        activity.startAnimating()
-//        navigationItem.titleView = activity
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        Model.shared.delegate = self
+        navigationItem.rightBarButtonItem?.isEnabled = false
+        let activity = UIActivityIndicatorView()
+        activity.style = .gray
+        activity.startAnimating()
+        navigationItem.titleView = activity
         
         // Fetch records from Firebase and then reload the table view
         // Note: this may be significantly delayed.
@@ -20,9 +21,9 @@ class TableViewController: UITableViewController, ModelUpdateClient {
                 // Comment this out to show what it looks like while waiting
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
-//                    self.navigationItem.rightBarButtonItem?.isEnabled = true
-//                    self.navigationItem.titleView = nil
-//                    self.title = "Persons"
+                    self.navigationItem.rightBarButtonItem?.isEnabled = true
+                    self.navigationItem.titleView = nil
+                    self.title = "Persons"
                 }
             }
         }
@@ -80,10 +81,10 @@ class TableViewController: UITableViewController, ModelUpdateClient {
     
    
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        Model.shared.delegate = self
-    }
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//        Model.shared.delegate = self
+//    }
        
      
     

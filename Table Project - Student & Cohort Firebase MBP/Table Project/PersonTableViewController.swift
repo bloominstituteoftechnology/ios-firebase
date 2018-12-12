@@ -2,6 +2,28 @@ import UIKit
 
 class PersonTableViewController: UITableViewController {
     
+    // Table View's initial load
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        Firebase<Person>.fetchRecords { people in
+            if let people = people {
+                Model.shared.setPeople(people)
+                
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+            }
+        }
+        
+    }
+    
+    // reload when we return from the detail view (ensure that the table view reloads whenever we return from the detail view controller)
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
+    }
+    
     // Number of sections
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 2
@@ -76,12 +98,7 @@ class PersonTableViewController: UITableViewController {
             self.tableView.reloadData()
         }
     }
-    
-    // reload when we return from the detail view (ensure that the table view reloads whenever we return from the detail view controller)
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        tableView.reloadData()
-    }
+
     
     // Cell height information - set custom heights for each section
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

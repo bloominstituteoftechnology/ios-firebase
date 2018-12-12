@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--People-->
+        <!--Lambda Students-->
         <scene sceneID="CaF-JK-AWs">
             <objects>
                 <tableViewController id="YEr-i5-6pO" customClass="PersonTableViewController" customModule="Table_Project" customModuleProvider="target" sceneMemberID="viewController">
@@ -137,7 +137,7 @@
                             <outlet property="delegate" destination="YEr-i5-6pO" id="Kgc-4L-6ku"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="People" id="XdA-02-amw"/>
+                    <navigationItem key="navigationItem" title="Lambda Students" id="XdA-02-amw"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6vO-Eg-L4a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

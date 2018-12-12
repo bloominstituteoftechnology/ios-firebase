@@ -70,7 +70,7 @@ class Model {
     }
     
     // Call this to update any changes that were made in the detail view on Firebase
-    func updatePerson(person: Person, indexPath: IndexPath, completion: @escaping () -> Void) {
+    func updatePerson(person: Person, completion: @escaping () -> Void) {
         
         // Remote
         Firebase<Person>.save(item: person) { success in

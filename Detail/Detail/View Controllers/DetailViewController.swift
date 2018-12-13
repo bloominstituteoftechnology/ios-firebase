@@ -2,6 +2,7 @@ import UIKit
 
 class DetailViewController: UIViewController {
     var person: Person?
+    var indexPath: IndexPath?
     
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var cohortField: UITextField!
@@ -21,8 +22,10 @@ class DetailViewController: UIViewController {
         person.cohort = cohortField.text ?? ""
         navigationController?.popViewController(animated: true)
         // update Firebase
-        Firebase<Person>.save(item: person) { success in
-            guard success else { return }
-        }
+//        Firebase<Person>.save(item: person) { success in
+//            guard success else { return }
+//        }
+        // Insert connection from model - Thanks to Austin Cole.
+        Model.shared.updatePerson(at: indexPath!) { return }
     }
 }

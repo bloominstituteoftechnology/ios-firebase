@@ -5,4 +5,5 @@ class PersonCell: UITableViewCell {
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var cohortLabel: UILabel!
+   // @IBOutlet weak var addOutlet: UIButton!
 }

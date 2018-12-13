@@ -2,6 +2,10 @@ import UIKit
 
 class TableViewController: UITableViewController, ModelUpdateClient {
     
+    // Outlet for the add button, to modify when loading.
+    
+
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 2
     }
@@ -54,10 +58,11 @@ class TableViewController: UITableViewController, ModelUpdateClient {
         
         // Need to change this to the add button that is already there - Part 1/2
         // navigationItem.rightBarButtonItem?.isEnabled.toggle()
-        let activity = UIActivityIndicatorView()
-        activity.style = .gray
-        activity.startAnimating()
-        navigationItem.titleView = activity
+        // addOutlet.isEnabled.toggle()
+//        let activity = UIActivityIndicatorView()
+//        activity.style = .gray
+//        activity.startAnimating()
+//        navigationItem.titleView = activity
         
         
         Firebase<Person>.fetchRecords { persons in
@@ -68,8 +73,9 @@ class TableViewController: UITableViewController, ModelUpdateClient {
                     self.tableView.reloadData()
                     // need to update this accordingly - Part 2/2
                     // self.navigationItem.rightBarButtonItem?.isEnabled.toggle()
-                    self.navigationItem.titleView = nil
-                    self.title = "People"
+                    // self.addOutlet.isEnabled.toggle()
+//                    self.navigationItem.titleView = nil
+//                    self.title = "People"
                 }
             }
         }
@@ -85,6 +91,8 @@ class TableViewController: UITableViewController, ModelUpdateClient {
         guard let destination = segue.destination as? DetailViewController
             else { return }
         destination.person = Model.shared.person(forIndex: indexPath.row)
+        // Connection to the Detail VC, thanks to Austin Cole
+        destination.indexPath = indexPath
     }
 
     // Add deleting students functionality to table

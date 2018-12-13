@@ -148,8 +148,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="6o4-oi-WbL">
-                                <rect key="frame" x="8" y="293" width="359" height="81"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="6o4-oi-WbL">
+                                <rect key="frame" x="8" y="285" width="359" height="97"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="lastBaseline" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="MHJ-Og-V35">
                                         <rect key="frame" x="0.0" y="0.0" width="359" height="24"/>
@@ -169,7 +169,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="lastBaseline" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="RVK-Cb-6ud">
-                                        <rect key="frame" x="0.0" y="27" width="359" height="24"/>
+                                        <rect key="frame" x="0.0" y="35" width="359" height="24"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cohort:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gZr-Lg-677">
                                                 <rect key="frame" x="0.0" y="3.5" width="58" height="20.5"/>
@@ -187,7 +187,7 @@
                                         <viewLayoutGuide key="safeArea" id="3ox-18-Pan"/>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ueR-DL-Hzl">
-                                        <rect key="frame" x="0.0" y="51" width="359" height="30"/>
+                                        <rect key="frame" x="0.0" y="67" width="359" height="30"/>
                                         <state key="normal" title="Save"/>
                                         <connections>
                                             <action selector="save:" destination="85a-XO-wIQ" eventType="touchUpInside" id="7qc-IJ-V97"/>

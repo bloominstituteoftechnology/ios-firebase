@@ -53,7 +53,7 @@ class TableViewController: UITableViewController, ModelUpdateClient {
         // Seems unnecessary for the most part, since it probably won't work out of the box.
         
         // Need to change this to the add button that is already there - Part 1/2
-        navigationItem.rightBarButtonItem?.isEnabled.toggle()
+        // navigationItem.rightBarButtonItem?.isEnabled.toggle()
         let activity = UIActivityIndicatorView()
         activity.style = .gray
         activity.startAnimating()
@@ -67,7 +67,7 @@ class TableViewController: UITableViewController, ModelUpdateClient {
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
                     // need to update this accordingly - Part 2/2
-                    self.navigationItem.rightBarButtonItem?.isEnabled.toggle()
+                    // self.navigationItem.rightBarButtonItem?.isEnabled.toggle()
                     self.navigationItem.titleView = nil
                     self.title = "People"
                 }

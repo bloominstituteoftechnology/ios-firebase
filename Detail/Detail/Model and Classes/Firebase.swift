@@ -11,7 +11,7 @@ import Foundation
 // https://dec122018lambda.firebaseio.com/
 
 class Firebase<Item: Codable & FirebaseItem> {
-    static var baseURL: URL!  { return URL(string: "https://dec122018lambda.firebaseio.com/") }
+    static var baseURL: URL!  { return URL(string: "https://detail-ios-firebase.firebaseio.com/") }
     
     static func requestURL(_ method: String, for recordIdentifier: String = "unknownid") -> URL {
         switch method {

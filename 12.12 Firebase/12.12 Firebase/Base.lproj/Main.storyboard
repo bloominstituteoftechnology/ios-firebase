@@ -6,13 +6,14 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Student Directory-->
         <scene sceneID="HxC-5g-aXr">
             <objects>
-                <tableViewController id="AzW-II-0ZT" sceneMemberID="viewController">
+                <tableViewController id="AzW-II-0ZT" customClass="StudentTableViewController" customModule="_2_12_Firebase" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ryx-kG-rgB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -49,12 +50,65 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Student Directory" id="2Hl-Qg-NZG">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="5f9-ie-sLX"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="5f9-ie-sLX">
+                            <connections>
+                                <segue destination="dQ7-nA-sGy" kind="show" id="Dv5-hV-Kz6"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xZX-6p-Xjn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1056.8" y="136.28185907046478"/>
+            <point key="canvasLocation" x="994" y="134"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="afT-X6-0RI">
+            <objects>
+                <viewController id="dQ7-nA-sGy" customClass="StudentViewController" customModule="_2_12_Firebase" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GY6-af-V8s">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XAL-1e-E7Q">
+                                <rect key="frame" x="93" y="125" width="188" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add Student to Directory" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nTz-BW-J93">
+                                <rect key="frame" x="93" y="81" width="191" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone number:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MDP-MS-1Lm">
+                                <rect key="frame" x="93" y="189" width="188" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Mjy-Kd-XKL"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="xh1-vF-ice">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="KyA-GO-swm">
+                            <connections>
+                                <action selector="addButton:" destination="dQ7-nA-sGy" id="WAc-KB-OMD"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="nameLabel" destination="XAL-1e-E7Q" id="ejW-ik-JVn"/>
+                        <outlet property="phoneLabel" destination="MDP-MS-1Lm" id="DuV-kr-WRJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yC8-Um-HXL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1780" y="134.48275862068968"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="jGN-Hf-viu">

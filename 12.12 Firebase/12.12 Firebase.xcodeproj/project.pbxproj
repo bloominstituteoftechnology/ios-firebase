@@ -7,17 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		842532C821C1C09000152D91 /* StudentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842532C721C1C09000152D91 /* StudentTableViewController.swift */; };
+		842532CA21C1C10E00152D91 /* StudentStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842532C921C1C10E00152D91 /* StudentStyle.swift */; };
+		842532CC21C1C17C00152D91 /* FirebaseItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842532CB21C1C17C00152D91 /* FirebaseItem.swift */; };
+		842532CE21C1C20000152D91 /* Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842532CD21C1C20000152D91 /* Firebase.swift */; };
+		842532D021C1C24000152D91 /* StudentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842532CF21C1C24000152D91 /* StudentModel.swift */; };
+		842532D221C1C26000152D91 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842532D121C1C26000152D91 /* Student.swift */; };
+		842532D421C1CB9700152D91 /* StudentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842532D321C1CB9700152D91 /* StudentViewController.swift */; };
 		84F4406621C1BD6C00DB30A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F4406521C1BD6C00DB30A9 /* AppDelegate.swift */; };
-		84F4406821C1BD6C00DB30A9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F4406721C1BD6C00DB30A9 /* ViewController.swift */; };
 		84F4406B21C1BD6C00DB30A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84F4406921C1BD6C00DB30A9 /* Main.storyboard */; };
 		84F4406D21C1BD6D00DB30A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84F4406C21C1BD6D00DB30A9 /* Assets.xcassets */; };
 		84F4407021C1BD6D00DB30A9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84F4406E21C1BD6D00DB30A9 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		842532C721C1C09000152D91 /* StudentTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentTableViewController.swift; sourceTree = "<group>"; };
+		842532C921C1C10E00152D91 /* StudentStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentStyle.swift; sourceTree = "<group>"; };
+		842532CB21C1C17C00152D91 /* FirebaseItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseItem.swift; sourceTree = "<group>"; };
+		842532CD21C1C20000152D91 /* Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Firebase.swift; sourceTree = "<group>"; };
+		842532CF21C1C24000152D91 /* StudentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentModel.swift; sourceTree = "<group>"; };
+		842532D121C1C26000152D91 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
+		842532D321C1CB9700152D91 /* StudentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentViewController.swift; sourceTree = "<group>"; };
 		84F4406221C1BD6C00DB30A9 /* 12.12 Firebase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "12.12 Firebase.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84F4406521C1BD6C00DB30A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		84F4406721C1BD6C00DB30A9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		84F4406A21C1BD6C00DB30A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		84F4406C21C1BD6D00DB30A9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84F4406F21C1BD6D00DB30A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -54,9 +66,15 @@
 		84F4406421C1BD6C00DB30A9 /* 12.12 Firebase */ = {
 			isa = PBXGroup;
 			children = (
+				842532D121C1C26000152D91 /* Student.swift */,
+				842532C721C1C09000152D91 /* StudentTableViewController.swift */,
 				84F4406521C1BD6C00DB30A9 /* AppDelegate.swift */,
-				84F4406721C1BD6C00DB30A9 /* ViewController.swift */,
 				84F4406921C1BD6C00DB30A9 /* Main.storyboard */,
+				842532D321C1CB9700152D91 /* StudentViewController.swift */,
+				842532C921C1C10E00152D91 /* StudentStyle.swift */,
+				842532CB21C1C17C00152D91 /* FirebaseItem.swift */,
+				842532CD21C1C20000152D91 /* Firebase.swift */,
+				842532CF21C1C24000152D91 /* StudentModel.swift */,
 				84F4406C21C1BD6D00DB30A9 /* Assets.xcassets */,
 				84F4406E21C1BD6D00DB30A9 /* LaunchScreen.storyboard */,
 				84F4407121C1BD6D00DB30A9 /* Info.plist */,
@@ -135,8 +153,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84F4406821C1BD6C00DB30A9 /* ViewController.swift in Sources */,
+				842532D021C1C24000152D91 /* StudentModel.swift in Sources */,
+				842532CE21C1C20000152D91 /* Firebase.swift in Sources */,
+				842532CC21C1C17C00152D91 /* FirebaseItem.swift in Sources */,
+				842532CA21C1C10E00152D91 /* StudentStyle.swift in Sources */,
+				842532D421C1CB9700152D91 /* StudentViewController.swift in Sources */,
 				84F4406621C1BD6C00DB30A9 /* AppDelegate.swift in Sources */,
+				842532C821C1C09000152D91 /* StudentTableViewController.swift in Sources */,
+				842532D221C1C26000152D91 /* Student.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

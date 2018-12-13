@@ -2,6 +2,8 @@ import UIKit
 
 class PersonTableViewController: UITableViewController {
     
+    let addPersonCell = AddPersonCell()
+    
     let deviceRefreshControl = UIRefreshControl()
     
     // Table View's initial load
@@ -10,6 +12,8 @@ class PersonTableViewController: UITableViewController {
         
         // Cosmetic Elements
         // while loading, don't let user tap 'add' button
+        addPersonCell.nameField?.isEnabled = false
+        addPersonCell.cohortField?.isEnabled = false
         //addButtonOutlet.isEnabled = false
         
         // Let user know that data is loading
@@ -144,6 +148,8 @@ class PersonTableViewController: UITableViewController {
                     self.tableView.reloadData()
                     
                     // When done with the request, re-enable the view
+                    self.addPersonCell.nameField?.isEnabled = true
+                    self.addPersonCell.cohortField?.isEnabled = true
                     //self.addButtonOutlet.isEnabled = true
                     self.navigationItem.titleView = nil
                     self.title = "Lambda Students"

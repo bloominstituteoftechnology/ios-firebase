@@ -12,6 +12,16 @@
 		C4351A7D21C1B2B3007E4831 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4351A7B21C1B2B3007E4831 /* Main.storyboard */; };
 		C4351A7F21C1B2B4007E4831 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4351A7E21C1B2B4007E4831 /* Assets.xcassets */; };
 		C4351A8221C1B2B4007E4831 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4351A8021C1B2B4007E4831 /* LaunchScreen.storyboard */; };
+		C4351A8A21C1B2DB007E4831 /* FirebaseItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4351A8921C1B2DB007E4831 /* FirebaseItem.swift */; };
+		C4351A8C21C1B2FE007E4831 /* Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4351A8B21C1B2FE007E4831 /* Firebase.swift */; };
+		C4351A8E21C1B87F007E4831 /* PersonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4351A8D21C1B87F007E4831 /* PersonCell.swift */; };
+		C4351A9021C1B889007E4831 /* EntryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4351A8F21C1B889007E4831 /* EntryCell.swift */; };
+		C4351A9221C1B8D8007E4831 /* PersonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4351A9121C1B8D8007E4831 /* PersonCell.xib */; };
+		C4351A9421C1B8E4007E4831 /* EntryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4351A9321C1B8E4007E4831 /* EntryCell.xib */; };
+		C4351A9621C1C0F8007E4831 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4351A9521C1C0F8007E4831 /* DetailViewController.swift */; };
+		C4351A9821C1C4D4007E4831 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4351A9721C1C4D4007E4831 /* Model.swift */; };
+		C4351A9A21C1C557007E4831 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4351A9921C1C557007E4831 /* Person.swift */; };
+		C4351A9C21C1C93D007E4831 /* CustomTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4351A9B21C1C93D007E4831 /* CustomTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +32,16 @@
 		C4351A7E21C1B2B4007E4831 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C4351A8121C1B2B4007E4831 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C4351A8321C1B2B4007E4831 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C4351A8921C1B2DB007E4831 /* FirebaseItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FirebaseItem.swift; path = ../../FirebaseItem.swift; sourceTree = "<group>"; };
+		C4351A8B21C1B2FE007E4831 /* Firebase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Firebase.swift; path = ../../Firebase.swift; sourceTree = "<group>"; };
+		C4351A8D21C1B87F007E4831 /* PersonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCell.swift; sourceTree = "<group>"; };
+		C4351A8F21C1B889007E4831 /* EntryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryCell.swift; sourceTree = "<group>"; };
+		C4351A9121C1B8D8007E4831 /* PersonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonCell.xib; sourceTree = "<group>"; };
+		C4351A9321C1B8E4007E4831 /* EntryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EntryCell.xib; sourceTree = "<group>"; };
+		C4351A9521C1C0F8007E4831 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		C4351A9721C1C4D4007E4831 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		C4351A9921C1C557007E4831 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		C4351A9B21C1C93D007E4831 /* CustomTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,9 +74,19 @@
 		C4351A7621C1B2B3007E4831 /* cohortFirebase */ = {
 			isa = PBXGroup;
 			children = (
+				C4351A9121C1B8D8007E4831 /* PersonCell.xib */,
+				C4351A9321C1B8E4007E4831 /* EntryCell.xib */,
 				C4351A7721C1B2B3007E4831 /* AppDelegate.swift */,
+				C4351A8D21C1B87F007E4831 /* PersonCell.swift */,
+				C4351A8F21C1B889007E4831 /* EntryCell.swift */,
+				C4351A8B21C1B2FE007E4831 /* Firebase.swift */,
+				C4351A8921C1B2DB007E4831 /* FirebaseItem.swift */,
 				C4351A7921C1B2B3007E4831 /* ViewController.swift */,
 				C4351A7B21C1B2B3007E4831 /* Main.storyboard */,
+				C4351A9521C1C0F8007E4831 /* DetailViewController.swift */,
+				C4351A9721C1C4D4007E4831 /* Model.swift */,
+				C4351A9B21C1C93D007E4831 /* CustomTableViewController.swift */,
+				C4351A9921C1C557007E4831 /* Person.swift */,
 				C4351A7E21C1B2B4007E4831 /* Assets.xcassets */,
 				C4351A8021C1B2B4007E4831 /* LaunchScreen.storyboard */,
 				C4351A8321C1B2B4007E4831 /* Info.plist */,
@@ -124,6 +154,8 @@
 			files = (
 				C4351A8221C1B2B4007E4831 /* LaunchScreen.storyboard in Resources */,
 				C4351A7F21C1B2B4007E4831 /* Assets.xcassets in Resources */,
+				C4351A9421C1B8E4007E4831 /* EntryCell.xib in Resources */,
+				C4351A9221C1B8D8007E4831 /* PersonCell.xib in Resources */,
 				C4351A7D21C1B2B3007E4831 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -135,8 +167,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4351A8A21C1B2DB007E4831 /* FirebaseItem.swift in Sources */,
+				C4351A8E21C1B87F007E4831 /* PersonCell.swift in Sources */,
 				C4351A7A21C1B2B3007E4831 /* ViewController.swift in Sources */,
+				C4351A8C21C1B2FE007E4831 /* Firebase.swift in Sources */,
+				C4351A9C21C1C93D007E4831 /* CustomTableViewController.swift in Sources */,
+				C4351A9021C1B889007E4831 /* EntryCell.swift in Sources */,
 				C4351A7821C1B2B3007E4831 /* AppDelegate.swift in Sources */,
+				C4351A9A21C1C557007E4831 /* Person.swift in Sources */,
+				C4351A9621C1C0F8007E4831 /* DetailViewController.swift in Sources */,
+				C4351A9821C1C4D4007E4831 /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

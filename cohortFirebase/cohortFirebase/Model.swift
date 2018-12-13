@@ -1,9 +1,22 @@
-//
-//  Model.swift
-//  cohortFirebase
-//
-//  Created by Julian A. Fordyce on 12/12/18.
-//  Copyright © 2018 Julian A. Fordyce. All rights reserved.
-//
-
 import Foundation
+
+class Model {
+    static let shared = Model()
+    private init() {}
+    
+    private var persons: [Person] = []
+    
+    func count() -> Int {
+        return persons.count
+    }
+    
+    func person(forIndex index: Int) -> Person {
+       return persons[index]
+    }
+    
+    func add(person: Person) {
+        persons.append(person)
+        
+        Firebase<Person>.save(item: device) { success }
+    }
+}

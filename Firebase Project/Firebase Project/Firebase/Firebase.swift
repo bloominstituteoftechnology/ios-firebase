@@ -1,15 +1,6 @@
-//
-//  Firebase.swift
-//  Firebase Project
-//
-//  Created by Ivan Caldwell on 12/7/18.
-//  Copyright © 2018 Ivan Caldwell. All rights reserved.
-//
-
 import Foundation
 /*
  READ   <- start the application
- 
  POST   <- create, creating a new record, Firebase will return a new record identifier
  PUT    <- update a specific record
  DELETE <- delete a specific record
@@ -17,7 +8,7 @@ import Foundation
 
 
 class Firebase<Item: Codable & FirebaseItem> {
-    static var baseURL: URL!  { return URL(string: "https://detailfirebaseproject.firebaseio.com/") }
+    static var baseURL: URL!  { return URL(string: "https://student-firebase-ae727.firebaseio.com/") }
     
     static func requestURL(_ method: String, for recordIdentifier: String = "unknownid") -> URL {
         switch method {
@@ -76,7 +67,6 @@ class Firebase<Item: Codable & FirebaseItem> {
             }
             
             // Process POST requests
-            
             // Fetch identifier from POST
             guard let data = data else {
                 NSLog("Invalid server response data")

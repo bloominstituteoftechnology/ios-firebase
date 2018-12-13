@@ -1,6 +1,7 @@
 import UIKit
 
 class TableViewController: UITableViewController, ModelUpdateClient {
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 2
     }
@@ -47,6 +48,31 @@ class TableViewController: UITableViewController, ModelUpdateClient {
     override func viewDidLoad() {
         super.viewDidLoad()
         Model.shared.delegate = self
+        
+        // Added from the Devices project
+        // Seems unnecessary for the most part, since it probably won't work out of the box.
+        
+        // Need to change this to the add button that is already there - Part 1/2
+        navigationItem.rightBarButtonItem?.isEnabled.toggle()
+        let activity = UIActivityIndicatorView()
+        activity.style = .gray
+        activity.startAnimating()
+        navigationItem.titleView = activity
+        
+        
+        Firebase<Person>.fetchRecords { persons in
+            if let persons = persons {
+                Model.shared.setPerson(persons)
+                
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                    // need to update this accordingly - Part 2/2
+                    self.navigationItem.rightBarButtonItem?.isEnabled.toggle()
+                    self.navigationItem.titleView = nil
+                    self.title = "People"
+                }
+            }
+        }
     }
     
     func modelDidUpdate() {
@@ -58,7 +84,14 @@ class TableViewController: UITableViewController, ModelUpdateClient {
             else { return }
         guard let destination = segue.destination as? DetailViewController
             else { return }
-        
         destination.person = Model.shared.person(forIndex: indexPath.row)
+    }
+
+    // Add deleting students functionality to table
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        guard editingStyle == .delete else { return }
+        Model.shared.deletePerson(at: indexPath) {
+            self.tableView.reloadData()
+        }
     }
 }

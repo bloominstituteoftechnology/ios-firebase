@@ -15,6 +15,11 @@ class Model {
         return persons[index]
     }
     
+    // Maintain encapsulation
+    func setPerson(_ persons: [Person]) {
+        self.persons = persons
+    }
+
     func addNewPerson(person: Person, completion: @escaping () -> Void) {
         persons.append(person)
         delegate?.modelDidUpdate()

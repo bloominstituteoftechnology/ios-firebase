@@ -1,0 +1,37 @@
+What is a RESTful interface? When do you use it? What are its characteristics?
+
+It's similar to CRUD, but it utilizes GET, POST, PUT, DELETE and it is a remote web service.
+
+
+What is the difference between POST and PUT?
+
+POST is creating data, while PUT is updating data.
+
+
+How does the record ID work in Firebase? Why does it take two steps to save a record (first POST then PUT) in our app? Why does the FirebaseItem protocol even exist?
+
+It creates a unique identifier on Firebase. Firebase protocol exists to allow the record identifier to work. 
+
+
+Explain what a generic type is and what advantages it offers.
+
+Generic code it flexible and allows you to reuse functions and types. 
+
+
+What does a URLRequest do? When do you need one and when can you just use a URL?
+It combines the URL we want to load and the policy to use.
+
+
+What is the role of a URL session? How does it work?
+It allows your app to create one or more sessions in regards to data transfer.
+
+
+What are completion handlers? Why use completion handlers? What advantages do they provide?
+
+It's code that contains a closure and we use it to handle the tasks that need to be ran after the data retrieval is complete.
+
+
+Explain at least three strategies that promote code reuse that we used in today's project.
+
+Completion Handlers, Closures, Generic Types.
+

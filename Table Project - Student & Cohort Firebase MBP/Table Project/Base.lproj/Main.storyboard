@@ -90,7 +90,7 @@
                                     <outlet property="nameField" destination="V9K-gi-FeC" id="HvD-xF-RK6"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="personcell" rowHeight="99" id="CXc-3O-0Tr" customClass="PersonCell" customModule="Table_Project" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="blue" indentationWidth="10" reuseIdentifier="personcell" rowHeight="99" id="CXc-3O-0Tr" customClass="PersonCell" customModule="Table_Project" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="172" width="375" height="99"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CXc-3O-0Tr" id="5Te-jx-dpP">

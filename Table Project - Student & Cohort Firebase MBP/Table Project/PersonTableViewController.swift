@@ -31,7 +31,7 @@ class PersonTableViewController: UITableViewController {
         
     }
     
-    // reload when we return from the detail view (ensure that the table view reloads whenever we return from the detail view controller)
+    // Reload when we return from the detail view (ensure that the table view reloads whenever we return from the detail view controller)
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         tableView.reloadData()
@@ -68,8 +68,8 @@ class PersonTableViewController: UITableViewController {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: PersonCell.reuseIdentifier, for: indexPath) as? PersonCell
             else { fatalError("Unable to dequeue person cell") }
         
-        // put information into the person cell - populating the person cell
         // grab a person
+        // put information into the person cell - populating the person cell
         let person = Model.shared.person(at: indexPath)
         cell.nameLabel.text = person.name
         cell.cohortLabel.text = person.cohort
@@ -82,7 +82,7 @@ class PersonTableViewController: UITableViewController {
         guard let cell = tableView.cellForRow(at: IndexPath(row: 0, section: 0)) as? AddPersonCell
             else { return }
         
-        // grab text from the nameField, check to make sure it is not empty, and if it's not empty, then continue (ensure that the name is not empty)
+        // Grab text from the nameField, check to make sure it is not empty, and if it's not empty, then continue (ensure that the name is not empty)
         guard let name = cell.nameField.text, !name.isEmpty
             else { return }
         
@@ -96,7 +96,7 @@ class PersonTableViewController: UITableViewController {
         cell.nameField.text = ""
         cell.cohortField.text = ""
         
-        // add to the model and firebase
+        // Add to the model and firebase
         Model.shared.addNewPerson(person: person) {
             // update the table view
             self.tableView.reloadData()
@@ -159,5 +159,6 @@ class PersonTableViewController: UITableViewController {
             }
         }
     }
+
     
 }

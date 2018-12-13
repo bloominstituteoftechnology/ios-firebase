@@ -8,9 +8,10 @@ import Foundation
  DELETE <- delete a specific record
  */
 
+// https://dec122018lambda.firebaseio.com/
 
 class Firebase<Item: Codable & FirebaseItem> {
-    static var baseURL: URL!  { return URL(string: "https://put-and-post.firebaseio.com/") }
+    static var baseURL: URL!  { return URL(string: "https://detail-ios-firebase.firebaseio.com/") }
     
     static func requestURL(_ method: String, for recordIdentifier: String = "unknownid") -> URL {
         switch method {
@@ -120,7 +121,7 @@ class Firebase<Item: Codable & FirebaseItem> {
     static func fetchRecords(completion: @escaping ([Item]?) -> Void) {
         let requestURL = baseURL.appendingPathExtension("json")
         let dataTask = URLSession.shared.dataTask(with: requestURL) { data, _, error in
-
+            
             guard error == nil, let data = data else {
                 // Guaranteed to work
                 if let error = error {

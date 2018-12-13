@@ -20,5 +20,9 @@ class DetailViewController: UIViewController {
         person.name = name
         person.cohort = cohortField.text ?? ""
         navigationController?.popViewController(animated: true)
+        // update Firebase
+        Firebase<Person>.save(item: person) { success in
+            guard success else { return }
+        }
     }
 }
